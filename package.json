@@ -1,0 +1,38 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d build",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomnlittle/website.git"
+  },
+  "author": "Thomas Northall-Little",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomnlittle/website/issues"
+  },
+  "homepage": "https://github.com/tomnlittle/website#readme",
+  "dependencies": {
+    "dva-cli": "^0.8.2",
+    "fs-extra": "^4.0.2",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.11.0",
+    "file-loader": "^1.1.5",
+    "react-hot-loader": "^3.1.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
