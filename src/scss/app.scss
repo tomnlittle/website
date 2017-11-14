@@ -1,5 +1,12 @@
 div {
     display: block;
     background: black;
-    text-shadow:white;
+
+    header {
+        h1 {
+            color: white;
+            text-shadow: blue;
+            background: red;
+        }
+    }
 }

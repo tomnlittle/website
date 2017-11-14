@@ -166,7 +166,7 @@ module.exports = {
                   },
                   use: [
                     {
-                      loader: require.resolve('sass-loader'),
+                      loader: require.resolve('css-loader'),
                       options: {
                         importLoaders: 1,
                         minimize: true,
@@ -174,7 +174,7 @@ module.exports = {
                       },
                     },
                     {
-                      loader: require.resolve('postcss-loader'),
+                      loader: require.resolve('sass-loader'),
                       options: {
                         // Necessary for external CSS imports to work
                         // https://github.com/facebookincubator/create-react-app/issues/2677
