@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import scss from './scss/app.scss'
+import classnames from 'classnames';
 
 class App extends Component {
   render() {
+    const classes = classnames('banner');
     return (
-      <div>
+      <div className={classes}>
         <header>
           <h1>Welcome to React</h1>
         </header>
-        
       </div>
     );
   }
