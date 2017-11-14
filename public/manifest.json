@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  // This is for android web apps
+  "short_name": "tomnlittle",
+  "name": "Thomas Little Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
