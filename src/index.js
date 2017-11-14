@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+// Semantic UI styles
+require('semantic-ui-css/semantic.min.css');
+
 //Import the scss file
 require('./stylesheets/main.scss');
 
