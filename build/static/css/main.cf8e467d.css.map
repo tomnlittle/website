@@ -1,1 +1,0 @@
-{"version":3,"sources":["scss/app.scss"],"names":[],"mappings":"AAAA,IACE,cACA,eAAkB,CAClB,cACE,WACA,iBACA,cAAgB","file":"static/css/main.cf8e467d.css","sourcesContent":["div {\n  display: block;\n  background: black; }\n  div header h1 {\n    color: white;\n    text-shadow: blue;\n    background: red; }\n\n\n\n// WEBPACK FOOTER //\n// ./src/scss/app.scss"],"sourceRoot":""}
