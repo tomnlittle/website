@@ -1,0 +1,26 @@
+.nav-custom {
+  background-color: rgba(0, 0, 0, 0);
+
+  color: #FFF;
+  display: block;
+
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+
+  text-size-adjust: 100%;
+  transition-duration: 0.3s;
+}
+
+.nav-custom:hover,
+.nav-custom:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition-duration: 0.3s;
+}
+
+.nav-custom * {
+  text-decoration: none;
+  color: #FFF;
+  height: 100%;
+  line-height: inherit;
+}
