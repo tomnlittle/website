@@ -1,0 +1,31 @@
+.first-card {
+  display: inline-block;
+
+  margin: 25px;
+  padding: 12px;
+}
+
+.first-card img {
+  border-radius: 2px;
+}
+
+.first-card span {
+  margin: 20px;
+  display: grid;
+}
+
+.main-block {
+  /* box-shadow: #3f3844; */
+  box-shadow: 0 0 5px 5px rgba(63, 56, 68, 0.1); /* #3f3844 */
+  height: 100vh;
+}
+
+.first-block {
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#335bff+1,33c1ff+100 */
+  background: rgb(51,91,255); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(51,91,255,1) 1%, rgba(51,193,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(51,91,255,1) 1%,rgba(51,193,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(51,91,255,1) 1%,rgba(51,193,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#335bff', endColorstr='#33c1ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

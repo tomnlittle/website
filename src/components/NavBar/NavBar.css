@@ -1,26 +1,23 @@
+
 .nav-custom {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(249, 249, 249);
 
-  color: #FFF;
   display: block;
-
-  height: 50px;
-  line-height: 50px;
   position: relative;
 
-  text-size-adjust: 100%;
-  transition-duration: 0.3s;
-}
+  height: 80px;
+  line-height: 80px;
 
-.nav-custom:hover,
-.nav-custom:focus {
-  background-color: rgba(0, 0, 0, 0.3);
-  transition-duration: 0.3s;
+  box-shadow: 0 0 5px 5px rgba(63, 56, 68, 0.1); /* #3f3844 */
 }
 
 .nav-custom * {
-  text-decoration: none;
-  color: #FFF;
   height: 100%;
   line-height: inherit;
+
+  color: #3f3844;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }

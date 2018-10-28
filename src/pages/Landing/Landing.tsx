@@ -6,15 +6,17 @@ export class Landing extends React.Component {
 
   render(): JSX.Element {
     return (
-      // <Card>
-      //   {/* <Terminal className={'icon'} /> */}
-      //   <div>
-      //     Not Found
-      //     <p>Sorry we couldn't find that page...</p>
-      //   </div>
-      // </Card>
-      <div>
+      <div className={'main-block'}>
+        <div className={'first-block'}>
+          <Card className={'first-card'}>
+            <img src='profile/high.jpg'/>
+            <span>
+              Short description here
+            </span>
+          </Card>
+        </div>
 
+        asdc
       </div>
     );
   }

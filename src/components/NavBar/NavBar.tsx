@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Brand } from './components/Brand';
+import { Right } from './components/Right';
 
 import './NavBar.css'
 
@@ -15,6 +16,9 @@ export class NavBar extends React.Component {
               <span>Thomas Northall-Little</span>
             </Link>
           </Brand>
+          <Right>
+asdcasdc
+          </Right>
         </Header>
       </nav>
     );
