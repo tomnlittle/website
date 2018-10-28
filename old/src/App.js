@@ -1,22 +1,11 @@
 import React, { Component } from 'react'
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-  Visibility,
-} from 'semantic-ui-react'
 
-import classnames from 'classnames';
+import { Button, Container, Divider, Grid,
+         Header, Image, List,
+         Segment } from 'semantic-ui-react'
 
 export default class App extends Component {
-  
+
 
   render() {
     return (
@@ -27,14 +16,14 @@ export default class App extends Component {
           style={{ minHeight: 700, padding: '1em 0em' }}
           vertical
         >
-          <Container text>
-            <Header as='h1' inverted style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}>
+
+          <Image src='/images/header.jpg'/>
+            <Header as='h1' inverted style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }} >
               Thomas Northall-Little
             </Header>
-            <Header as='h2' inverted style={{ fontSize: '1.7em', fontWeight: 'normal' }}>
-            Do whatever you want when you want to.
-            </Header>
-          </Container>
+
+
+
         </Segment>
 
         <Segment style={{ padding: '8em 0em' }} vertical>
@@ -53,7 +42,7 @@ export default class App extends Component {
                 <p style={{ fontSize: '1.33em' }}>
                   Image ?
                 </p>
-               
+
               </Grid.Column>
             </Grid.Row>
 
@@ -76,7 +65,7 @@ export default class App extends Component {
               <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                 <Header as='h3' style={{ fontSize: '2em' }}>Break Two</Header>
                 <p style={{ fontSize: '1.33em' }}>
-                  Minor 
+                  Minor
                 </p>
               </Grid.Column>
             </Grid.Row>
