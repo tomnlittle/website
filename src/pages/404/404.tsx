@@ -8,7 +8,7 @@ export class NotFound extends React.Component<any, any > {
   render(): JSX.Element {
     return (
       <Card>
-        <Terminal className={'icon'} />
+        <Terminal className={'error-icon'} />
         <div className={'error'}>
           Not Found
           <p>Sorry we couldn't find that page...</p>

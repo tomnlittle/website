@@ -12,6 +12,8 @@
 }
 
 .nav-custom * {
+  display: inline-block;
+
   height: 100%;
   line-height: inherit;
 
@@ -20,4 +22,9 @@
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+}
+
+.nav-icon {
+  width: 2em;
+  padding-right: 1em;
 }

@@ -1,0 +1,7 @@
+.nav-right {
+  right: 0;
+  float: right;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: absolute;
+}
