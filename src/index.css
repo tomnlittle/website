@@ -9,7 +9,6 @@ section {
 html {
   position: relative;
   min-height: 100%;
-  overflow-y: hidden;
 }
 
 body {
@@ -23,5 +22,5 @@ body {
   display: block;
   margin: 0px;
 
-  background-color: #f4f4f4;
+  background-color: rgb(249, 249, 249);
 }

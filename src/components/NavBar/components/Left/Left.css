@@ -1,0 +1,13 @@
+@media only screen and (max-width: 800px) {
+  .nav-left {
+    visibility: hidden;
+  }
+}
+
+.nav-left {
+  left: 0;
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: absolute;
+}

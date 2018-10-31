@@ -6,17 +6,25 @@ export class Landing extends React.Component {
 
   render(): JSX.Element {
     return (
-      <div className={'main-block'}>
-        <div className={'first-block'}>
-          <Card className={'first-card'}>
-            <img src='profile/high.jpg'/>
+      <div className={'landing'}>
+        <div className={'main-block'}>
+
+          <Card className={'profile-card'}>
+            <img src='profile/high.jpg' height={512} alt={'profile picture'}/>
             <span>
-              Short description here
+              Computer Science UNSW <br/>
+              Major AI
             </span>
           </Card>
+
+
+          <Card className={'skew-card-right'}>
+            hmm
+          </Card>
+
+
         </div>
 
-        asdc
       </div>
     );
   }

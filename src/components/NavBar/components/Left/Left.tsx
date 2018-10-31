@@ -1,10 +1,10 @@
 import * as React from 'react';
-import './Right.css'
+import './Left.css'
 
-export class Right extends React.Component {
+export class Left extends React.Component {
   render(): JSX.Element {
     return (
-      <div className={'nav-right'}>
+      <div className={'nav-left'}>
         {this.props.children}
       </div>
     );
