@@ -10,7 +10,7 @@ export class Landing extends React.Component {
         <div className={'main-block'}>
 
           <Card className={'profile-card'}>
-            <img src='profile/high.jpg' height={512} alt={'profile picture'}/>
+            <img src='profile/high.jpg' alt={'profile picture'}/>
             <span>
               Computer Science UNSW <br/>
               Major AI
@@ -18,9 +18,9 @@ export class Landing extends React.Component {
           </Card>
 
 
-          <Card className={'skew-card-right'}>
+          {/* <Card className={'skew-card-right'}>
             hmm
-          </Card>
+          </Card> */}
 
 
         </div>
