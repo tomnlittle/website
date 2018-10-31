@@ -1,3 +1,9 @@
+@media only screen and (max-width: 800px) {
+  .nav-right {
+    visibility: hidden;
+  }
+}
+
 .nav-right {
   right: 0;
   float: right;
