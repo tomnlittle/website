@@ -5,8 +5,8 @@ export class Card extends React.Component<React.HTMLAttributes<HTMLDivElement>, 
 
   render(): JSX.Element {
     return (
-      <div className={`card ${this.props.className}`}>
-        <div className={'card-child'}>
+      <div className={'card'}>
+        <div className={`${this.props.className}`}>
           {this.props.children}
         </div>
       </div>

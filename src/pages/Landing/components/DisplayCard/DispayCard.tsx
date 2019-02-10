@@ -7,7 +7,7 @@ export class DisplayCard extends React.Component {
   render(): JSX.Element {
     return (
       <Card className={'profile-card'}>
-        <img src='profile/high.jpg' alt={'profile picture'}/>
+        <img src='profile/low.jpg' alt={'profile picture'}/>
         <div>
           Computer Science UNSW <br/>
           Major AI

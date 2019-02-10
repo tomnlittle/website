@@ -1,26 +1,26 @@
-/* https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Open+Sans:300 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
 /* important for creating full page sections */
 section {
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+  /* position: relative; */
+  /* min-height: 100%; */
 }
 
 body {
-  color: #3f3844;
-  text-align: center;
+  color: #111111;
   text-decoration: none;
 
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 
-  display: block;
   margin: 0px;
+}
 
-  background-color: rgb(249, 249, 249);
+a, a:hover, a:visited {
+  color: inherit;
+  text-decoration: none;
 }

@@ -5,7 +5,14 @@ export class Brand extends React.Component {
   render(): JSX.Element {
     return (
       <div className={'nav-brand'}>
-        {this.props.children}
+        <table>
+          <tbody>
+            <tr>
+              <th><img src='profile.jpg' alt={'profile picture'}/></th>
+              <th>Thomas Northall-Little</th>
+            </tr>
+          </tbody>
+        </table>
       </div>
     );
   }

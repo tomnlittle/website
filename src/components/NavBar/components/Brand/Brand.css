@@ -1,6 +1,16 @@
 .nav-brand {
-  padding-right: 3em;
-  padding-left: 3em;
+  float: left;
+  font-size: 25px;
+  height: 100%;
+}
 
-  font-size: 30px;
+.nav-brand table {
+  height: 100%;
+}
+
+.nav-brand img {
+  height: 45px;
+  margin-right: 5px;
+  vertical-align: middle;
+  border-radius: 22px;
 }

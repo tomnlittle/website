@@ -1,24 +1,12 @@
-
-.nav-custom {
+.navbar {
   background-color: rgb(249, 249, 249);
+  box-shadow: 0 0 5px 5px rgba(63, 56, 68, 0.1);
 
   display: block;
-  position: relative;
 
-  height: 50px;
-  line-height: 50px;
+  padding: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
 
-  box-shadow: 0 0 5px 5px rgba(63, 56, 68, 0.1); /* #3f3844 */
-}
-
-.nav-custom * {
-  display: inline-block;
-
-  height: 100%;
-  line-height: inherit;
-
-  color: #3f3844;
-  text-align: center;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
+  height: 70px;
 }
