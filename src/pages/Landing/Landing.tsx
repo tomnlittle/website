@@ -1,8 +1,8 @@
 import * as React from 'react';
-// import { DisplayCard } from './components/DisplayCard';
-import './Landing.css';
+import { Award, Code } from 'react-feather';
 
 import { Card } from '../../components'
+import './Landing.css';
 
 
 export class Landing extends React.Component {
@@ -14,7 +14,12 @@ export class Landing extends React.Component {
         <div className={'container'}>
           <a href=''>
             <Card className={'profile-card right'}>
-              Experience
+              <div>
+                <Award/>
+              </div>
+              <div>
+                Experience
+              </div>
             </Card>
           </a>
         </div>
@@ -22,7 +27,12 @@ export class Landing extends React.Component {
         <div className={'container'}>
           <a href='/'>
             <Card className={'profile-card left'}>
-              Projects
+              <div>
+                <Code/>
+              </div>
+              <div>
+                Projects
+              </div>
             </Card>
           </a>
         </div>

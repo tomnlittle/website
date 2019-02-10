@@ -12,10 +12,9 @@
 .profile-card {
   display: block;
   width: 200px;
-  height: 100px;
   text-align: center;
-  line-height: 100px;
-  font-size: 20px;
+  font-size: 18px;
+  padding: 10px;
 }
 
 .left {
