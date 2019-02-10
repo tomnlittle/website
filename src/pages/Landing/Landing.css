@@ -2,25 +2,3 @@
   margin: auto;
   width: 100%;
 }
-
-.landing .container {
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-}
-
-.profile-card {
-  display: block;
-  width: 200px;
-  text-align: center;
-  font-size: 18px;
-  padding: 10px;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}

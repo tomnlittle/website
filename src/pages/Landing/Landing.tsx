@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { Award, Code } from 'react-feather';
 
-import { Card } from '../../components'
+import { ButtonBar, Timeline } from './components';
 import './Landing.css';
 
 
@@ -11,30 +10,10 @@ export class Landing extends React.Component {
     return (
       <div className={'landing'}>
 
-        <div className={'container'}>
-          <a href=''>
-            <Card className={'profile-card right'}>
-              <div>
-                <Award/>
-              </div>
-              <div>
-                Experience
-              </div>
-            </Card>
-          </a>
-        </div>
+        <ButtonBar/>
 
-        <div className={'container'}>
-          <a href='/'>
-            <Card className={'profile-card left'}>
-              <div>
-                <Code/>
-              </div>
-              <div>
-                Projects
-              </div>
-            </Card>
-          </a>
+        <div className={'timeline'}>
+
         </div>
       </div>
     );
