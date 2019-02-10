@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { GitHub, Linkedin, Mail  } from 'react-feather';
+import { GitHub, Linkedin, File } from 'react-feather';
 
 import { Brand } from './components/Brand';
-import { Right } from './components/Right';
-import { Left } from './components/Left';
-
+import { Right } from '../Right';
+import { Left } from '../Left';
 
 import './NavBar.css'
 
@@ -14,9 +13,10 @@ export class NavBar extends React.Component {
     return (
       <nav className={'nav-custom'}>
           <Left>
-            <a href="mailto:tomnlittle@outlook.com">
-              <Mail className={'nav-icon'}/>
-            </a>
+            <Link to='/'>
+              <File/>
+              <span style={{"float":"right"}}>Resume</span>
+            </Link>
           </Left>
           <Brand>
             <Link to='/'>
@@ -25,10 +25,10 @@ export class NavBar extends React.Component {
           </Brand>
           <Right>
             <a href="https://www.linkedin.com/in/thomas-northall-little-073604111">
-              <Linkedin className={'nav-icon'}/>
+              <Linkedin/>
             </a>
             <a href="https://github.com/tomnlittle">
-              <GitHub className={'nav-icon'}/>
+              <GitHub/>
             </a>
           </Right>
       </nav>

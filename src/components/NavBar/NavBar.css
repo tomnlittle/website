@@ -5,8 +5,8 @@
   display: block;
   position: relative;
 
-  height: 80px;
-  line-height: 80px;
+  height: 50px;
+  line-height: 50px;
 
   box-shadow: 0 0 5px 5px rgba(63, 56, 68, 0.1); /* #3f3844 */
 }
@@ -21,10 +21,4 @@
   text-align: center;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-}
-
-.nav-icon {
-  width: 2em;
-  padding-right: 1em;
 }

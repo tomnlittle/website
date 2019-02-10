@@ -1,0 +1,16 @@
+.profile-card {
+  display: inline-block;
+
+  margin: 25px;
+  padding: 12px;
+}
+
+.profile-card img {
+  border-radius: 2px;
+  height: 100vw;
+  max-height: 500px;
+}
+
+.profile-card span {
+  padding: 15px;
+}

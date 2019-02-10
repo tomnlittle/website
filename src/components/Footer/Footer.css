@@ -1,7 +1,8 @@
 .footer {
-
   height: 60px;
   line-height: 60px;
+
+  font-size: 11px;
 
   background-color: rgb(249, 249, 249);
 }
@@ -10,19 +11,4 @@
   color: #AAA;
   text-decoration: none;
   height: inherit;
-
-  padding-left:10px;
-  padding-right: 10px;
-}
-
-.footer-right {
-  float: right;
-}
-
-.footer-left {
-  float: left;
-}
-
-.footer-icon {
-  height: 100%;
 }
