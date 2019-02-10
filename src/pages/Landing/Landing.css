@@ -1,19 +1,26 @@
 .landing {
-   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#335bff+1,33c1ff+100 */
-   background: rgb(51,91,255); /* Old browsers */
-   background: -moz-linear-gradient(-45deg, rgba(51,91,255,1) 1%, rgba(51,193,255,1) 100%); /* FF3.6-15 */
-   background: -webkit-linear-gradient(-45deg, rgba(51,91,255,1) 1%,rgba(51,193,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-   background: linear-gradient(135deg, rgba(51,91,255,1) 1%,rgba(51,193,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#335bff', endColorstr='#33c1ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  height: 100vh;
+
+  margin: auto;
+  width: 100%;
+}
+
+.landing .container {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
 }
 
 .profile-card {
-  /* display: inline-block; */
-  /* float: left; */
+  display: block;
+  width: 30%;
+  height: 100%;
+}
 
-  /* margin: 25px; */
-  width: 100px;
-  height: 100px;
-  /* padding: 12px; */
+.left {
+  float: left;
+}
 
+.right {
+  float: right;
 }

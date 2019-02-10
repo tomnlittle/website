@@ -1,2 +1,2 @@
-export * from './Brand';
+export * from './Left';
 export * from './Right';

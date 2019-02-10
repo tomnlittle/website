@@ -1,10 +1,11 @@
 import * as React from 'react';
-import './Brand.css'
+import './Left.css'
 
-export class Brand extends React.Component {
+export class Left extends React.Component {
   render(): JSX.Element {
     return (
-      <div className={'nav-brand'}>
+      <div className={'nav-left'}>
+        <a href='/'>
         <table>
           <tbody>
             <tr>
@@ -13,6 +14,7 @@ export class Brand extends React.Component {
             </tr>
           </tbody>
         </table>
+        </a>
       </div>
     );
   }

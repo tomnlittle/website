@@ -10,12 +10,22 @@ export class Landing extends React.Component {
   render(): JSX.Element {
     return (
       <div className={'landing'}>
-        <Card className={'profile-card'}>
-          hello
-        </Card>
-        <Card className={'profile-card'}>
-          hello
-        </Card>
+
+        <div className={'container'}>
+          <a href=''>
+            <Card className={'profile-card right'}>
+              Experience
+            </Card>
+          </a>
+        </div>
+
+        <div className={'container'}>
+          <a href='/'>
+            <Card className={'profile-card left'}>
+              Projects
+            </Card>
+          </a>
+        </div>
       </div>
     );
   }

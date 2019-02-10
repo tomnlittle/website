@@ -1,14 +1,14 @@
-.nav-brand {
+.nav-left {
   float: left;
   font-size: 25px;
   height: 100%;
 }
 
-.nav-brand table {
+.nav-left table {
   height: 100%;
 }
 
-.nav-brand img {
+.nav-left img {
   height: 45px;
   margin-right: 5px;
   vertical-align: middle;

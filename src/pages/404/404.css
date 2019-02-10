@@ -1,15 +1,12 @@
 .error {
-  display: block;
-  align-self: center;
-  font-size: 4em;
+  font-size: 30px;
 }
 
 .error p {
-  font-size: 0.5em;
+  font-size: 20px;
 }
 
 .error-icon {
-  height: 10em;
-  width: 10em;
-  margin: 1em;
+  height: 80px;
+  width: 80px;
 }
