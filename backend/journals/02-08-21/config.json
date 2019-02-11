@@ -1,0 +1,14 @@
+{
+  "experience": true,
+  "project": true,
+  "tags": [
+    "typescript",
+    "jest",
+    "docker",
+    "travis",
+    "codecov",
+    "snyk",
+    "mvc",
+    "slack"
+  ]
+}
