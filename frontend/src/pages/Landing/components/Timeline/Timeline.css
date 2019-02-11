@@ -5,6 +5,8 @@
   padding: 20px;
   color: #19191A;
   margin: auto;
+
+  min-height: 100vw;
 }
 
 .timeline h1 {

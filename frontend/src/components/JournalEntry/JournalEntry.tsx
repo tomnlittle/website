@@ -23,8 +23,15 @@ export class JournalEntry extends React.Component <IJournal>  {
   public render(): JSX.Element {
     return (
       <Card className={'journal-entry'}>
-        { this.props.experience || <div className={'icon'}><Award/></div> }
-        { this.props.project || <div className={'icon'}><Code/></div> }
+        { this.props.experience && <div className={'icon'}><Award/></div> }
+        { this.props.project && <div className={'icon'}><Code/></div> }
+        {/* { this.props.tags.length && this.props.tags.map((tag) => {
+          return (
+            <div className={'tag'}>
+              { tag.toUpperCase() }
+            </div>
+          );
+        })} */}
         <small> { moment(this.props.date).format('MMMM Do') } </small>
         <ReactMarkdown source={this.props.file} />,
       </Card>

@@ -8,7 +8,8 @@ import './Timeline.css';
 export class Timeline extends React.Component<ILandingProps> {
 
   public state = {
-    journals: []
+    journals: [],
+    years: []
   };
 
   constructor(props) {
@@ -23,9 +24,11 @@ export class Timeline extends React.Component<ILandingProps> {
     });
 
     const body = await data.json();
+    const years = Object.keys(body).sort((prev, curr) => curr < prev ? -1 : 1);
 
     this.setState({
-      journals: body
+      journals: body,
+      years,
     });
   }
 
@@ -33,7 +36,7 @@ export class Timeline extends React.Component<ILandingProps> {
     return (
       <div className={'timeline'}>
 
-        { Object.keys(this.state.journals).length !== 0 && Object.keys(this.state.journals).map((year, idx) => {
+        { this.state.years.length !== 0 && this.state.years.map((year, idx) => {
 
           const journals: any = this.state.journals[year];
 

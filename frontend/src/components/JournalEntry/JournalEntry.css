@@ -35,3 +35,10 @@
 .journal-entry .icon {
   float: left;
 }
+
+.journal-entry .tag {
+  text-align: center;
+  color: #CAD0D6;
+  display: inline-block;
+  font-size: 14px;
+}
