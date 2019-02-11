@@ -1,0 +1,12 @@
+.error {
+  font-size: 30px;
+}
+
+.error p {
+  font-size: 20px;
+}
+
+.error-icon {
+  height: 80px;
+  width: 80px;
+}

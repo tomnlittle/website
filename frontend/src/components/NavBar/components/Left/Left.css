@@ -1,0 +1,16 @@
+.nav-left {
+  float: left;
+  font-size: 25px;
+  height: 100%;
+}
+
+.nav-left table {
+  height: 100%;
+}
+
+.nav-left img {
+  height: 45px;
+  margin-right: 5px;
+  vertical-align: middle;
+  border-radius: 22px;
+}
