@@ -23,7 +23,7 @@ export class Timeline extends React.Component {
 
     const body = await data.json();
 
-    // console.log(body);
+    console.error(body);
 
     this.setState({
       journals: [body.file]
@@ -36,9 +36,13 @@ export class Timeline extends React.Component {
 
         <h3> Timeline </h3>
 
-        <div>
-          <ReactMarkdown source={this.state.journals[0]} />,
-        </div>
+        { this.state.journals.length !== 0 && this.state.journals.map((entry, idx) => {
+          return (
+          <div key={idx} className={'journal-entry'}>
+            <ReactMarkdown source={entry} />,
+          </div>
+          );
+        })}
 
       </div>
     );
