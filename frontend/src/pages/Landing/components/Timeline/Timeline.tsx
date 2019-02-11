@@ -2,9 +2,10 @@ import * as React from 'react';
 
 import { JournalEntry } from '../../../../components';
 import { request } from '../../../../utils';
+import { ILandingProps } from '../../ILandingProps';
 import './Timeline.css';
 
-export class Timeline extends React.Component {
+export class Timeline extends React.Component<ILandingProps> {
 
   public state = {
     journals: []
@@ -36,14 +37,21 @@ export class Timeline extends React.Component {
 
         { Object.keys(this.state.journals).length !== 0 && Object.keys(this.state.journals).map((year, idx) => {
 
-          const journals = this.state.journals[year];
+          const journals: any = this.state.journals[year];
+
+          const filteredJournals = journals.filter((journal) => {
+            return this.props.experience && journal.experience || this.props.projects && journal.project;
+          });
 
           return (
             <div key={idx}>
 
               <h1>{year}</h1>
 
-              {journals.map((journal, kdx) => <JournalEntry key={kdx} {...journal} ></JournalEntry>)}
+              {filteredJournals.map((journal, kdx) => {
+                  return <JournalEntry key={kdx} {...journal} ></JournalEntry>;
+                })
+              }
             </div>
           );
         })}
