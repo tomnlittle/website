@@ -25,6 +25,7 @@
 
 .journal-entry p {
   font-size: 16px;
+  text-align: left;
 }
 
 .journal-entry li {
