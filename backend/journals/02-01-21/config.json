@@ -1,5 +1,5 @@
 {
-  "experience": true,
+  "experience": false,
   "project": true,
   "tags": [
     "typescript",
