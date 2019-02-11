@@ -12,6 +12,7 @@ export async function request({
   body
 }: MethodArguments) : Promise<any> {
   return fetch(url, {
-    method
+    method,
+    mode: 'no-cors'
   })
 }
