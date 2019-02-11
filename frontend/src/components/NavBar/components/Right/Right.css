@@ -1,13 +1,15 @@
-/* @media only screen and (max-width: 800px) {
-  .nav-right {
-    visibility: hidden;
-  }
-} */
 
 .nav-right {
   float: right;
   padding: 0px;
   height: 100%;
+  padding-right: 5vw;
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav-right {
+    padding-right: 5px;
+  }
 }
 
 .nav-right table {

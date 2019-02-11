@@ -6,14 +6,14 @@ export class Left extends React.Component {
     return (
       <div className={'nav-left'}>
         <a href='/'>
-        <table>
-          <tbody>
-            <tr>
-              <th><img src='profile.jpg' alt={'profile picture'}/></th>
-              <th>Thomas Northall-Little</th>
-            </tr>
-          </tbody>
-        </table>
+          <table>
+            <tbody>
+              <tr>
+                <th><img src='profile.jpg' alt={'profile picture'}/></th>
+                <th>Thomas Northall-Little</th>
+              </tr>
+            </tbody>
+          </table>
         </a>
       </div>
     );
