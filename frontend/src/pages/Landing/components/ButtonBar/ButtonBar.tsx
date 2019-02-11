@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { Award, Code } from 'react-feather';
 
-import { Card } from '../../../../components'
+import { Card } from '../../../../components';
 import './ButtonBar.css';
-
 
 export class ButtonBar extends React.Component {
 
-  render(): JSX.Element {
+  public render(): JSX.Element {
     return (
       <div>
 

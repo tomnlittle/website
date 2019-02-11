@@ -5,7 +5,7 @@ import './404.css';
 
 export class NotFound extends React.Component<any, any > {
 
-  render(): JSX.Element {
+  public render(): JSX.Element {
     return (
       <Card className={'error'}>
         <div>

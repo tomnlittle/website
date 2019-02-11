@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 import { Left, Right } from './components';
-import './NavBar.css'
+import './NavBar.css';
 
 export class NavBar extends React.Component {
-  render(): JSX.Element {
+  public render(): JSX.Element {
     return (
       <div className={'navbar'}>
         <Left/>

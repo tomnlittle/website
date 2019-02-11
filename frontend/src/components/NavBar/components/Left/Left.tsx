@@ -1,8 +1,8 @@
 import * as React from 'react';
-import './Left.css'
+import './Left.css';
 
 export class Left extends React.Component {
-  render(): JSX.Element {
+  public render(): JSX.Element {
     return (
       <div className={'nav-left'}>
         <a href='/'>

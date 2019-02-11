@@ -1,23 +1,6 @@
 {
-    "defaultSeverity": "warning",
-    "extends": [
-        "tslint-react"
-    ],
-    "linterOptions": {
-        "exclude": [
-            "config/**/*.js",
-            "node_modules/**/*.ts",
-            "coverage/lcov-report/*.js"
-        ]
-    },
-    "rules": {
-        "max-line-length": false,
-        "no-import-side-effect": false,
-        "no-non-null-assertion": false,
-        "no-floating-promises": false,
-        "no-unsafe-any": false,
-        "jsx-no-multiline-js": false,
-        "jsx-no-lambda": false
-        // "strict": true
-    }
+  "extends": "../tslint.json",
+  "rules" : {
+    "no-default-export": false,
+  }
 }

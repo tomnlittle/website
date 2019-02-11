@@ -1,33 +1,44 @@
 import * as React from 'react';
+import * as ReactMarkdown from 'react-markdown';
 
 import { request } from '../../../../utils';
 import './Timeline.css';
 
 export class Timeline extends React.Component {
 
-  async componentWillMount() {
-    console.log('about to mount');
+  public state = {
+    journals: []
+  };
+
+  constructor(props) {
+    super(props);
+  }
+
+  public async componentWillMount() {
 
     const data = await request({
-      url: 'https://localhost:3000/',
+      url: 'https://localhost:3000/journal',
       method: 'GET'
-    })
+    });
 
-    console.log({ data })
+    const body = await data.json();
 
+    // console.log(body);
+
+    this.setState({
+      journals: [body.file]
+    });
   }
 
-  componentDidMount() {
-    console.log('component mounted')
-  }
-
-  render(): JSX.Element {
+  public render(): JSX.Element {
     return (
       <div className={'timeline'}>
 
         <h3> Timeline </h3>
 
-        asdcas
+        <div>
+          <ReactMarkdown source={this.state.journals[0]} />,
+        </div>
 
       </div>
     );

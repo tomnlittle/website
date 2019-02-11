@@ -1,4 +1,4 @@
-interface MethodArguments {
+interface IMethodArguments {
   url: string;
   method: 'GET' | 'POST';
   qs?: {};
@@ -10,9 +10,11 @@ export async function request({
   method = 'GET',
   qs,
   body
-}: MethodArguments) : Promise<any> {
+}: IMethodArguments): Promise<Response> {
   return fetch(url, {
     method,
-    mode: 'no-cors'
-  })
+    headers: {
+      Accept: 'application/json'
+    }
+  });
 }

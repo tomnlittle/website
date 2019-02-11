@@ -3,7 +3,7 @@ import './Footer.css';
 
 export class Footer extends React.Component {
 
-  render(): JSX.Element {
+  public render(): JSX.Element {
     return (
       <div className={'footer'}>
         <div>

@@ -1,11 +1,7 @@
-import * as express from 'express';
-
 import * as https from 'https';
 
+import { app } from './api';
 import { CERT, KEY, PORT } from './config/app';
-import { router } from './router';
-
-const app = express().use(router);
 
 https.createServer({
   key: KEY,

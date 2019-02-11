@@ -1,14 +1,12 @@
 import * as React from 'react';
-import Routes from './routes';
-import { NavBar } from './components/NavBar';
 import { Footer } from './components/Footer';
+import { NavBar } from './components/NavBar';
+import { Routes } from './routes';
 
-const App = () => (
+export const App = () => (
   <div>
     <NavBar/>
     <Routes/>
     <Footer/>
   </div>
 );
-
-export default App;
