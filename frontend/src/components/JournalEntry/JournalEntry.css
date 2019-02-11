@@ -31,3 +31,7 @@
 .journal-entry li {
   text-align: left;
 }
+
+.journal-entry .icon {
+  float: left;
+}

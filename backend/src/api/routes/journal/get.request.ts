@@ -12,6 +12,8 @@ interface IJournal {
   date: Date;
   file: string;
   tags: string[];
+  experience: boolean;
+  project: boolean;
 }
 
 router.get('/', (req, res) => {
@@ -25,19 +27,19 @@ router.get('/', (req, res) => {
     const fullPath = path.join(basePath, folder);
 
     const filePath = path.join(fullPath, 'index.md');
-    const tagsPath = path.join(fullPath, '.tags');
+    const configPath = path.join(fullPath, 'config.json');
 
     const file = readFileSync(filePath).toString();
-    const tags = readFileSync(tagsPath).toString();
-
-    const tagsArray = tags.split('\n');
+    const { tags, experience, project } = JSON.parse(readFileSync(configPath).toString());
 
     const date = new Date(folder);
 
     const journal: IJournal = {
       date,
       file,
-      tags: tagsArray
+      tags,
+      experience,
+      project
     };
 
     const key = date.getFullYear();
