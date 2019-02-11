@@ -1,5 +1,12 @@
 .timeline {
-  background-color: rgb(249, 249, 249);
+  background-color: #DAE0E6;
   display: block;
-  padding-left: 10px;
+
+  padding: 20px;
+  color: #19191A;
+  margin: auto;
+}
+
+.timeline h1 {
+  text-align: center;
 }
