@@ -11,8 +11,8 @@ services:
     command: yarn start:watch
     restart: on-failure
     environment:
-      KEY_PATH: ../server.key
-      CERT_PATH: ../server.crt
+      KEY_PATH: server.key
+      CERT_PATH: server.crt
     labels:
       namespace: backend
       tier: api
@@ -43,9 +43,9 @@ services:
     restart: on-failure
     environment:
       TARGET_HOST: api
-      CA_CERT_PATH: ../root.pem
-      KEY_PATH: ../server.key
-      CERT_PATH: ../server.crt
+      CA_CERT_PATH: root.pem
+      KEY_PATH: server.key
+      CERT_PATH: server.crt
     labels:
       namespace: backend
       tier: test

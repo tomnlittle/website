@@ -9,7 +9,7 @@ export class Timeline extends React.Component {
     console.log('about to mount');
 
     const data = await request({
-      url: 'http://localhost:3000/',
+      url: 'https://localhost:3000/',
       method: 'GET'
     })
 
