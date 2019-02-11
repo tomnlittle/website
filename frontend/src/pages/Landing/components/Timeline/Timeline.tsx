@@ -24,8 +24,6 @@ export class Timeline extends React.Component<ILandingProps> {
 
     const body = await data.json();
 
-    console.error(body);
-
     this.setState({
       journals: body
     });

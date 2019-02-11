@@ -17,8 +17,8 @@ export class ButtonBar extends React.Component<ILandingProps> {
       <div>
 
         <div className={'container'}>
-          <a onClick={this.props.toggleExperience}>
-            <Card className={'profile-card right'}>
+          <button onClick={this.props.toggleExperience} className={'right'}>
+            <Card className={`profile-card ${this.props.experience ? '' : 'disabled' }`}>
               <div>
                 <Award/>
               </div>
@@ -26,12 +26,12 @@ export class ButtonBar extends React.Component<ILandingProps> {
                 Experience
               </div>
             </Card>
-          </a>
+          </button>
         </div>
 
         <div className={'container'}>
-        <a onClick={this.props.toggleProjects}>
-            <Card className={'profile-card left'}>
+          <button onClick={this.props.toggleProjects} className={'left'}>
+            <Card className={`profile-card ${this.props.projects ? '' : 'disabled'}`}>
               <div>
                 <Code/>
               </div>
@@ -39,7 +39,7 @@ export class ButtonBar extends React.Component<ILandingProps> {
                 Projects
               </div>
             </Card>
-          </a>
+          </button>
         </div>
 
       </div>

@@ -3,12 +3,22 @@
   width: 50%;
 }
 
+.container button, .container button:focus {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 .profile-card {
   display: block;
   width: 200px;
   text-align: center;
   font-size: 18px;
   padding: 10px;
+}
+
+.disabled {
+  color: #AAA !important;
 }
 
 .profile-card:hover {
