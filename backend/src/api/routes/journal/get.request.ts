@@ -1,18 +1,29 @@
 import { Router } from 'express';
-import { readFileSync } from 'fs';
+import { readdirSync, readFileSync } from 'fs';
 import * as path from 'path';
-import { Converter } from 'showdown';
 
 export const router = Router();
 
-const converter = new Converter();
-
 router.get('/', (req, res) => {
 
-  const filePath = path.join(__dirname, '../../../../test/journal/11.2.19/index.md');
-  const file = readFileSync(filePath).toString();
+  const basePath = path.join(__dirname, '../../../../journals');
+  const files = readdirSync(basePath);
 
-  res.json({
-    file
+  const data = files.map((folder) => {
+    const fullPath = path.join(basePath, folder);
+
+    const filePath = path.join(fullPath, 'index.md');
+    const tagsPath = path.join(fullPath, '.tags');
+
+    const file = readFileSync(filePath).toString();
+    const tags = readFileSync(tagsPath).toString();
+
+    return {
+      date: new Date(folder),
+      file,
+      tags
+    };
   });
+
+  res.json(data);
 });

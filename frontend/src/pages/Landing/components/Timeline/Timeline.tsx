@@ -26,7 +26,7 @@ export class Timeline extends React.Component {
     console.error(body);
 
     this.setState({
-      journals: [body.file]
+      journals: body
     });
   }
 
@@ -34,12 +34,13 @@ export class Timeline extends React.Component {
     return (
       <div className={'timeline'}>
 
-        <h3> Timeline </h3>
+        { this.state.journals.length !== 0 && this.state.journals.map(({ file, date, tags }, idx) => {
 
-        { this.state.journals.length !== 0 && this.state.journals.map((entry, idx) => {
           return (
           <div key={idx} className={'journal-entry'}>
-            <ReactMarkdown source={entry} />,
+            <h3> { date } </h3>
+            <h4> { tags } </h4>
+            <ReactMarkdown source={file} />,
           </div>
           );
         })}
