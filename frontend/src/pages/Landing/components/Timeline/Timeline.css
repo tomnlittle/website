@@ -12,3 +12,9 @@
 .timeline h1 {
   text-align: center;
 }
+
+.timeline small {
+  text-align: center;
+  display: block;
+  color: #AAA;
+}

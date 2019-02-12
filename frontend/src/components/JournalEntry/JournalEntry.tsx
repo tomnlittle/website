@@ -33,7 +33,7 @@ export class JournalEntry extends React.Component <IJournal>  {
           );
         })} */}
         <small> { moment(this.props.date).format('MMMM Do') } </small>
-        <ReactMarkdown source={this.props.file} />,
+        <ReactMarkdown source={this.props.file} />
       </Card>
     );
   }

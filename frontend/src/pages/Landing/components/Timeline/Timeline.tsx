@@ -46,7 +46,7 @@ export class Timeline extends React.Component<ILandingProps> {
 
           if (filteredJournals.length === 0) {
             return (
-              <h1> No Posts to show :/ </h1>
+              <h1> No Posts to show for { year } :/ </h1>
             );
           }
 
@@ -54,6 +54,7 @@ export class Timeline extends React.Component<ILandingProps> {
             <div key={idx}>
 
               <h1>{year}</h1>
+              <small>{filteredJournals.length} posts</small>
 
               {filteredJournals.map((journal, kdx) => {
                   return <JournalEntry key={kdx} {...journal} ></JournalEntry>;
