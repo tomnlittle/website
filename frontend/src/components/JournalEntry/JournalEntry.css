@@ -10,7 +10,9 @@
 }
 
 .journal-entry img {
-
+  margin: 0 auto;
+  width: 100px;
+  display: block;
 }
 
 .journal-entry small {
