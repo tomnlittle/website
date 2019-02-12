@@ -1,3 +1,7 @@
+.button-bar {
+  border-bottom: 1mm solid rgb(200, 200, 200, .6);
+}
+
 .container {
   display: inline-block;
   width: 50%;

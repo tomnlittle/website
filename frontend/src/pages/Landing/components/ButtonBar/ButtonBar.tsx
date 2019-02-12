@@ -14,7 +14,7 @@ export class ButtonBar extends React.Component<ILandingProps> {
   public render(): JSX.Element {
 
     return (
-      <div>
+      <div className={'button-bar'}>
 
         <div className={'container'}>
           <button onClick={this.props.toggleExperience} className={'right'}>
