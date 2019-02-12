@@ -23,17 +23,26 @@
 }
 
 .journal-entry h1 {
-  font-size: 20px;
+  font-size: 24px;
   display: block;
 }
 
 .journal-entry h2 {
+  font-size: 20px;
+}
+
+.journal-entry h3 {
   font-size: 18px;
 }
 
 .journal-entry p {
   font-size: 16px;
-  text-align: left;
+}
+
+.journal-entry pre {
+  background-color: #292C34;
+  color: #EBECEE;
+  padding: 20px;
 }
 
 .journal-entry .icon {
