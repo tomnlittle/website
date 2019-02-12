@@ -15,6 +15,6 @@ router.use(cors());
 
 router.use('/journal', journalRouter);
 
-router.all('/', (req, res) => res.status(OK).json({ hello: 'world' }));
+router.all('/', (req, res) => res.status(OK));
 
 export const app = express().use(router);
