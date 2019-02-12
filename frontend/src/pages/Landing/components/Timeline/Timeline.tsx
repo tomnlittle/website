@@ -44,6 +44,12 @@ export class Timeline extends React.Component<ILandingProps> {
             return this.props.experience && journal.experience || this.props.projects && journal.project;
           });
 
+          if (filteredJournals.length === 0) {
+            return (
+              <h1> No Posts to show :/ </h1>
+            );
+          }
+
           return (
             <div key={idx}>
 
