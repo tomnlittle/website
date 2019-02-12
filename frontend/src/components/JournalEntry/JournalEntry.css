@@ -5,6 +5,14 @@
   margin: 20px auto;
 }
 
+.journal-entry * {
+  text-align: left;
+}
+
+.journal-entry img {
+
+}
+
 .journal-entry small {
   font-size: 16px;
   color: #CAD0D6;
@@ -14,21 +22,15 @@
 
 .journal-entry h1 {
   font-size: 20px;
-  text-align: center;
   display: block;
 }
 
 .journal-entry h2 {
   font-size: 18px;
-  text-align: center;
 }
 
 .journal-entry p {
   font-size: 16px;
-  text-align: left;
-}
-
-.journal-entry li {
   text-align: left;
 }
 
