@@ -25,5 +25,5 @@
     "start": "HTTPS=true PORT=3001 react-scripts-ts start",
     "test": "react-scripts-ts test --env=jsdom"
   },
-  "version": "0.1.0"
+  "version": "1.0.0"
 }
