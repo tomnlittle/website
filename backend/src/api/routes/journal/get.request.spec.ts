@@ -1,10 +1,10 @@
 import * as supertest from 'supertest';
-import { app } from '../../server';
+import { server } from '../../../server';
 
 describe('Get Journal Tests', () => {
 
   it('Should return journals', async () => {
-    const { body } = await supertest(app).get('/journal');
+    const { body } = await supertest(server).get('/journal');
 
     expect(body.length).toBeDefined();
   });

@@ -39,11 +39,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "yarn build --watch --preserveWatchOutput",
-    "docker:logs": "docker-compose logs -f",
-    "docker:restart": "yarn docker:stop && yarn docker:start",
-    "docker:start": "docker-compose -f docker-compose.yaml up -d",
-    "docker:stop": "docker-compose -f docker-compose.yaml down",
-    "start": "node build",
+    "start": "node build/app",
     "start:watch": "nodemon --config nodemon.json",
     "test": "jest",
     "test:watch": "yarn test --watchAll"

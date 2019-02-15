@@ -1,7 +1,7 @@
 import * as rp from 'request-promise';
 
-import { CA_CERT, TARGET_HOST } from '../../test/config';
-import { PORT } from '../config/app';
+import { CA_CERT, TARGET_HOST } from '../test/config';
+import { PORT } from './config/app';
 
 async function request(protocol: string): Promise<any> {
 

@@ -1,0 +1,23 @@
+{
+  "description": "My website",
+  "name": "website",
+  "private": true,
+  "publisher": "tomnlittle",
+  "repository": "git@github.com:tomnlittle/website.git",
+  "scripts": {
+    "backend:start": "yarn --cwd backend start",
+    "backend:test": "yarn --cwd backend test",
+    "backend:test:watch": "yarn --cwd backend test:watch",
+    "backend:watch": "yarn --cwd backend start:watch",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "yarn docker:stop && yarn docker:start",
+    "docker:start": "docker-compose -f docker-compose.yaml up -d",
+    "docker:stop": "docker-compose -f docker-compose.yaml down",
+    "frontend:start": "yarn --cwd frontend start",
+  },
+  "version": "1.0.0",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ]
+}
