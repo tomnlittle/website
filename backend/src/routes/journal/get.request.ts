@@ -1,24 +1,13 @@
+import { IJournal, IJournalConfig, IJournalResponse } from '@tomnlittle/types';
 import { Router } from 'express';
 import { readdirSync, readFileSync } from 'fs';
 import * as path from 'path';
 
 export const router = Router();
 
-interface IJournalResponse {
-  [year: string]: IJournal[];
-}
-
-interface IJournal {
-  date: Date;
-  file: string;
-  tags: string[];
-  experience: boolean;
-  project: boolean;
-}
-
 router.get('/', (req, res) => {
 
-  const basePath = path.join(__dirname, '../../../../journals');
+  const basePath = path.join(__dirname, '../../../journals');
   const files = readdirSync(basePath);
 
   const response: IJournalResponse = {};
@@ -30,16 +19,13 @@ router.get('/', (req, res) => {
     const configPath = path.join(fullPath, 'config.json');
 
     const file = readFileSync(filePath).toString();
-    const { tags, experience, project } = JSON.parse(readFileSync(configPath).toString());
+    const config = JSON.parse(readFileSync(configPath).toString()) as IJournalConfig;
 
     const date = new Date(folder);
 
     const journal: IJournal = {
-      date,
+      config,
       file,
-      tags,
-      experience,
-      project
     };
 
     const key = date.getFullYear();

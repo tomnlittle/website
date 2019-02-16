@@ -1,6 +1,6 @@
 {
   "description": "My website",
-  "name": "website",
+  "name": "@tomnlittle/website",
   "private": true,
   "publisher": "tomnlittle",
   "repository": "git@github.com:tomnlittle/website.git",
@@ -13,11 +13,12 @@
     "docker:restart": "yarn docker:stop && yarn docker:start",
     "docker:start": "docker-compose -f docker-compose.yaml up -d",
     "docker:stop": "docker-compose -f docker-compose.yaml down",
-    "frontend:start": "yarn --cwd frontend start",
+    "frontend:start": "yarn --cwd frontend start"
   },
   "version": "1.0.0",
   "workspaces": [
     "backend",
-    "frontend"
+    "frontend",
+    "libraries/*"
   ]
 }

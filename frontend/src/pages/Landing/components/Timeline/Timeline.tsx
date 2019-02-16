@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { IJournal } from '@tomnlittle/types';
 import { JournalEntry } from '../../../../components';
 import { request } from '../../../../utils';
 import { ILandingProps } from '../../ILandingProps';
@@ -19,7 +20,7 @@ export class Timeline extends React.Component<ILandingProps> {
   public async componentWillMount() {
 
     const data = await request({
-      url: 'https://localhost:3000/journal',
+      url: 'http://localhost:3000/api/journal',
       method: 'GET'
     });
 
@@ -38,10 +39,10 @@ export class Timeline extends React.Component<ILandingProps> {
 
         { this.state.years.length !== 0 && this.state.years.map((year, idx) => {
 
-          const journals: any = this.state.journals[year];
+          const journals: IJournal[] = this.state.journals[year];
 
           const filteredJournals = journals.filter((journal) => {
-            return this.props.experience && journal.experience || this.props.projects && journal.project;
+            return this.props.experience && journal.config.experience || this.props.projects && journal.config.project;
           });
 
           if (filteredJournals.length === 0) {

@@ -49,6 +49,16 @@
   float: left;
 }
 
+.journal-entry .github {
+  width: 100%;
+}
+
+.journal-entry .github * {
+  margin: auto;
+  display: block;
+  padding-top: 20px;
+}
+
 .journal-entry .tag {
   text-align: center;
   color: #CAD0D6;

@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "author": "Thomas Northall-Little",
     "private": true,
-    "main": "dist/index.d",
+    "main": "build",
     "scripts": {
         "build": "tsc -p tsconfig.json",
         "lint": "tslint -p tsconfig.json -c tslint.json",

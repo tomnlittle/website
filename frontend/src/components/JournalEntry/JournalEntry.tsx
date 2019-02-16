@@ -1,18 +1,11 @@
 import * as moment from 'moment';
 import * as React from 'react';
-import { Award, Code } from 'react-feather';
+import { Award, Code, GitHub } from 'react-feather';
 import * as ReactMarkdown from 'react-markdown';
+import { IJournal } from '@tomnlittle/types';
 
 import { Card } from '../Card';
 import './JournalEntry.css';
-
-interface IJournal {
-  date: Date;
-  file: string;
-  tags: string[];
-  experience: boolean;
-  project: boolean;
-}
 
 export class JournalEntry extends React.Component <IJournal>  {
 
@@ -23,8 +16,8 @@ export class JournalEntry extends React.Component <IJournal>  {
   public render(): JSX.Element {
     return (
       <Card className={'journal-entry'}>
-        { this.props.experience && <div className={'icon'}><Award/></div> }
-        { this.props.project && <div className={'icon'}><Code/></div> }
+        { this.props.config.experience && <div className={'icon'}><Award/></div> }
+        { this.props.config.project && <div className={'icon'}><Code/></div> }
         {/* { this.props.tags.length && this.props.tags.map((tag) => {
           return (
             <div className={'tag'}>
@@ -32,7 +25,9 @@ export class JournalEntry extends React.Component <IJournal>  {
             </div>
           );
         })} */}
-        <small> { moment(this.props.date).format('MMMM Do') } </small>
+        <h1> {this.props.config.title } </h1>
+        <small> { moment(this.props.config.date).format('MMMM Do') } </small>
+      { this.props.config.github && <a href={ this.props.config.github }><div className={'github'}> <GitHub size={48}/> </div></a> }
         <ReactMarkdown source={this.props.file} />
       </Card>
     );

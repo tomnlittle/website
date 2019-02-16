@@ -1,5 +1,5 @@
 import * as supertest from 'supertest';
-import { server } from '../../../server';
+import { server } from '../../server';
 
 describe('Get Journal Tests', () => {
 

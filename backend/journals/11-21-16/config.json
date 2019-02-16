@@ -1,12 +1,14 @@
 {
-  "experience": true,
+  "experience": false,
   "project": true,
-  "title": "",
-  "github": "",
+  "title": "Pi Quadcopter Project",
+  "github": "https://github.com/tomnlittle/Pi-Drone",
   "tags": [
-    "kubernetes",
-    "helm",
-    "docker",
-    "circleci"
+    "c++",
+    "arduino",
+    "raspberrypi",
+    "pid",
+    "cmake",
+    "i2c"
   ]
 }
