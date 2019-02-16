@@ -1,0 +1,11 @@
+{
+  "experience": false,
+  "project": true,
+  "title": "OpenCV Camera Interface",
+  "github": "https://github.com/tomnlittle/Camera-Interface-with-OpenCV",
+  "tags": [
+    "c++",
+    "cmake",
+    "opencv"
+  ]
+}

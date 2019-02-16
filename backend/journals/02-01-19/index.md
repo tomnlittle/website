@@ -1,7 +1,3 @@
-# Local Docker SSL Server
-
-[![GitHub](https://cdn2.iconfinder.com/data/icons/social-icons-circular-color/512/github-128.png)](https://github.com/tomnlittle/local-ssl-server)
-
 ## Why
 We had recently moved to a SSL development environment at work, and a number of machines had not been configured correctly and were experiencing issues. Notably my own laptop upon running the configuration scripts continued to encounter an Invalid Common name issue.
 

@@ -1,7 +1,3 @@
-# STEMN Slackbot
-
-[![GitHub](https://cdn2.iconfinder.com/data/icons/social-icons-circular-color/512/github-128.png)](https://github.com/stemn/stemn-slackbot)
-
 Starting working on STEMN's slack bot. The stack is based on typescript and will be using Slack's Client, Interactions and Event Driven Apis to communicate with users and connect them to STEMN's services.
 
 I am actually quite proud of what has been developed so far as I have been given the freedom to work on this project with little oversight allowing me to trial a variety of different project structures.
