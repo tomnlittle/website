@@ -38,6 +38,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "build:container": "docker build -t tomnlittle:$TAG .",
     "build:watch": "yarn build --watch --preserveWatchOutput",
     "start": "node build/app",
     "start:watch": "nodemon --config nodemon.json",

@@ -1,0 +1,15 @@
+language: bash
+
+services:
+  - docker
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+cache:
+  directories:
+    - $TRAVIS_BUILD_DIR/node_modules
+
+script:

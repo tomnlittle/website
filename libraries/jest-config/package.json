@@ -1,0 +1,12 @@
+{
+    "name": "@tomnlittle/jest-config",
+    "description": "Jest Configuration",
+    "version": "0.0.1",
+    "author": "Thomas Northall-Little",
+    "private": true,
+    "main": "jest.config",
+    "dependencies": {
+        "jest": "^23.6.0",
+        "ts-jest": "^23.10.3"
+    }
+}

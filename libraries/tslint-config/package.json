@@ -1,0 +1,11 @@
+{
+  "name": "@tomnlittle/tslint-config",
+  "version": "0.0.1",
+  "description": "tslint configuration",
+  "main": "tslint-base.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Northall-Little",
+  "license": "MIT"
+}
