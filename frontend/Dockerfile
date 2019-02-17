@@ -8,7 +8,7 @@ COPY package.json package.json
 COPY tsconfig.json tsconfig.json
 COPY tsconfig.prod.json tsconfig.prod.json
 COPY tslint.json tslint.json
-COPY yarn.lock yarn.lock
+COPY .env.production .env.production
 
 RUN yarn
 RUN yarn build

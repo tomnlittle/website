@@ -1,6 +1,7 @@
 import * as React from 'react';
-
 import { IJournal } from '@tomnlittle/types';
+
+import { REACT_APP_API_ADDRESS, REACT_APP_API_PROTOCOL } from '../../../../config/app';
 import { JournalEntry } from '../../../../components';
 import { request } from '../../../../utils';
 import { ILandingProps } from '../../ILandingProps';
@@ -20,7 +21,7 @@ export class Timeline extends React.Component<ILandingProps> {
   public async componentWillMount() {
 
     const data = await request({
-      url: 'http://localhost:3000/api/journal',
+      url: `${REACT_APP_API_PROTOCOL}://${REACT_APP_API_ADDRESS}/api/journal`,
       method: 'GET'
     });
 

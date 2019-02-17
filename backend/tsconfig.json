@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "@tomnlittle/tsconfig",
   "compilerOptions": {
     "outDir": "build",
     "types": [

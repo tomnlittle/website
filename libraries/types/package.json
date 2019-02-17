@@ -1,15 +1,14 @@
 {
     "name": "@tomnlittle/types",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "author": "Thomas Northall-Little",
-    "private": true,
     "main": "build",
     "scripts": {
         "build": "tsc -p tsconfig.json",
         "lint": "tslint -p tsconfig.json -c tslint.json",
-        "lint:fix": "tslint -p tsconfig.json -c tslint.json --fix",
-        "postinstall": "yarn build"
+        "lint:fix": "tslint -p tsconfig.json -c tslint.json --fix"
     },
+    "files": ["build"],
     "devDependencies": {
         "typescript": "^3.1.1"
     },

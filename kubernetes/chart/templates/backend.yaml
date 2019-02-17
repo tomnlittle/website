@@ -7,12 +7,13 @@ metadata:
     tier: backend
 
 spec:
+  type: NodePort
   selector:
     tier: backend
 
   ports:
-  - name: backend
-    port: {{ .Values.backend.port }}
+  - protocol: TCP
+    port: {{ .Values.ingress.port }}
     targetPort: backend
 
 ---
@@ -45,16 +46,16 @@ spec:
         - name: backend
           containerPort: {{ .Values.backend.port }}
 
-        readinessProbe:
-          httpGet:
-            path: /
-            port: {{ .Values.backend.port }}
-          initialDelaySeconds: 10
-          periodSeconds: 5
+        # readinessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: {{ .Values.backend.port }}
+        #   initialDelaySeconds: 10
+        #   periodSeconds: 5
 
-        livenessProbe:
-          httpGet:
-            path: /
-            port: {{ .Values.backend.port }}
-          initialDelaySeconds: 20
-          periodSeconds: 30
+        # livenessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: {{ .Values.backend.port }}
+        #   initialDelaySeconds: 20
+        #   periodSeconds: 30

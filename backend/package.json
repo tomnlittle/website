@@ -1,8 +1,7 @@
 {
-  "name": "@tomnlittle/backend",
   "author": "Thomas Northall-Little",
   "dependencies": {
-    "@tomnlittle/types": "*",
+    "@tomnlittle/types": "0.0.3",
     "cors": "^2.8.5",
     "express": "^4.16.2",
     "helmet": "^3.15.1",
@@ -11,6 +10,7 @@
   },
   "description": "",
   "devDependencies": {
+    "@tomnlittle/tsconfig": "*",
     "@types/cors": "^2.8.4",
     "@types/express": "^4.16.1",
     "@types/helmet": "^0.0.42",
@@ -27,6 +27,7 @@
   },
   "license": "MIT",
   "main": "build",
+  "name": "@tomnlittle/backend",
   "private": true,
   "repository": {
     "type": "git",
@@ -34,7 +35,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "build:container": "docker build -t tomnlittle:$TAG .",
+    "build:container": "docker build -t tomnlittle/website-backend:$TAG .",
     "build:watch": "yarn build --watch --preserveWatchOutput",
     "start": "node build/app",
     "start:watch": "nodemon --config nodemon.json",

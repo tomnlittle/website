@@ -13,6 +13,7 @@ router.use(cors());
 router.use(morgan('dev'));
 
 router.use('/journal', journalRouter);
-router.all('/', (req, res) => res.status(OK));
 
 export const server = express().use('/api', router);
+
+server.all('/', (req, res) => res.json(OK));

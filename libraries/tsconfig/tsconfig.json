@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "declaration": false,
+      "declarationMap": false,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "preserveSymlinks": true,
+      "pretty": true,
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "strict": true,
+      "target": "es2017",
+    }
+  }
