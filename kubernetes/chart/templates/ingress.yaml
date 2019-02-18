@@ -12,13 +12,16 @@ spec:
   tls:
   - secretName: {{ .Values.secrets.name }}
   rules:
-  - http:
+  - host: www.tomnlittle.com
+    http:
       paths:
       - path: /*
         backend:
           serviceName: frontend
           servicePort: {{ .Values.ingress.port }}
-      - path: /api/*
+  - host: api.tomnlittle.com
+    http:
+      - path: /*
         backend:
           serviceName: backend
           servicePort: {{ .Values.ingress.port }}
