@@ -8,9 +8,8 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     kubernetes.io/ingress.allow-http: "false"
     nginx.ingress.kubernetes.io/rewrite-target: /
+    ingress.gcp.kubernetes.io/pre-shared-cert: "website-ingress-secrets"
 spec:
-  tls:
-  - secretName: {{ .Values.secrets.name }}
   rules:
   - host: www.tomnlittle.com
     http:
