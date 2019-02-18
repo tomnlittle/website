@@ -1,7 +1,7 @@
 {
   "author": "Thomas Northall-Little",
   "dependencies": {
-    "@tomnlittle/types": "0.0.3",
+    "@tomnlittle/types": "*",
     "cors": "^2.8.5",
     "express": "^4.16.2",
     "helmet": "^3.15.1",

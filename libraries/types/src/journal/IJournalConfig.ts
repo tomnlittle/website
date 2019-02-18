@@ -1,8 +1,9 @@
 export interface IJournalConfig {
-  title: string;
-  github: string;
   date: Date;
-  tags: string[];
   experience: boolean;
+  github: string;
+  title: string;
   project: boolean;
+  reference: string;
+  tags: string[];
 }

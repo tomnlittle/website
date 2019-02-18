@@ -1,8 +1,8 @@
 {
   "experience": false,
-  "project": true,
-  "title": "Pi Quadcopter Project",
   "github": "https://github.com/tomnlittle/Pi-Drone",
+  "project": true,
+  "reference": "pi-quadcopter",
   "tags": [
     "c++",
     "arduino",
@@ -10,5 +10,6 @@
     "pid",
     "cmake",
     "i2c"
-  ]
+  ],
+  "title": "Pi Quadcopter Project"
 }

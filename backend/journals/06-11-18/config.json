@@ -1,12 +1,13 @@
 {
   "experience": true,
-  "project": true,
-  "title": "STEMN Kubernetes Update",
   "github": "",
+  "project": true,
+  "reference": "stemn-kubernetes-2018",
   "tags": [
     "kubernetes",
     "helm",
     "docker",
     "circleci"
-  ]
+  ],
+  "title": "STEMN Kubernetes Update"
 }

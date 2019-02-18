@@ -1,12 +1,13 @@
 {
   "experience": false,
-  "project": true,
-  "title": "RC Car Competition",
   "github": "https://github.com/tomnlittle/RC-CAR",
+  "project": true,
+  "reference": "create-rc-car",
   "tags": [
     "c++",
     "object-detection",
     "cmake",
     "unsw-create"
-  ]
+  ],
+  "title": "RC Car Competition"
 }

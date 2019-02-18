@@ -20,6 +20,7 @@ spec:
           servicePort: {{ .Values.ingress.port }}
   - host: api.tomnlittle.com
     http:
+      paths:
       - path: /*
         backend:
           serviceName: backend
