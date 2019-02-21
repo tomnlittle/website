@@ -13,7 +13,10 @@
     "docker:restart": "yarn docker:stop && yarn docker:start",
     "docker:start": "docker-compose -f docker-compose.yaml up -d",
     "docker:stop": "docker-compose -f docker-compose.yaml down",
-    "frontend:start": "yarn --cwd frontend start"
+    "frontend:start": "yarn --cwd frontend start",
+    "build:containers": "yarn --cwd backend build:container && yarn --cwd frontend build:container",
+    "build:kubernetes": "yarn --cwd kubernetes generate",
+    "update:kubernetes": "yarn --cwd kubernetes update"
   },
   "version": "1.0.0",
   "workspaces": [

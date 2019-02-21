@@ -39,7 +39,7 @@ spec:
       containers:
       - name: frontend
         imagePullPolicy: Always
-        image: tomnlittle/website:{{ .Values.frontend.tag }}
+        image: tomnlittle/website:{{ .Values.tag }}
         ports:
         - name: frontend
           containerPort: {{ .Values.frontend.port }}

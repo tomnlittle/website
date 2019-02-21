@@ -1,10 +1,10 @@
+tag:
+
 backend:
   port: 3000
-  tag:
 
 frontend:
   port: 80
-  tag:
 
 ingress:
   port: 443

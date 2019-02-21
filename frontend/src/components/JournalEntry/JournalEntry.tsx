@@ -17,7 +17,6 @@ export class JournalEntry extends React.Component <IJournal>  {
     return (
       <Card className={'journal-entry'}>
         <div id={ this.props.config.reference }/>
-        {/* <a href={ `#${this.props.config.reference}` }></a> */}
         { this.props.config.experience && <div className={'icon'}><Award/></div> }
         { this.props.config.project && <div className={'icon'}><Code/></div> }
         {/* { this.props.tags.length && this.props.tags.map((tag) => {

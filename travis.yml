@@ -11,5 +11,37 @@ addons:
 cache:
   directories:
     - $TRAVIS_BUILD_DIR/node_modules
+    - $HOME/google-cloud-sdk
 
-script:
+env:
+  global:
+  - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+
+before_script:
+  - if [ ! -d $HOME/google-cloud-sdk/bin ]; then
+    # The install script errors if this directory already exists,
+    # but Travis already creates it when we mark it as cached.
+    rm -rf $HOME/google-cloud-sdk;
+    # The install script is overly verbose, which sometimes causes
+    # problems on Travis, so ignore stdout.
+    curl https://sdk.cloud.google.com | bash > /dev/null;
+  fi
+
+  # This line is critical. We setup the SDK to take precedence in our
+  # environment over the old SDK that is already on the machine.
+  - source $HOME/google-cloud-sdk/path.bash.inc
+  - gcloud components update kubectl
+  - gcloud version
+
+  # auth service account
+  - echo $GCLOUD_KEY | base64 --decode > gcloud.key
+  - gcloud auth activate-service-account $GCLOUD_EMAIL --key-file gcloud.key
+
+  # get the cluster credentials
+  - gcloud container clusters get-credentials website --zone $GCLOUD_ZONE --project $GCLOUD_PROJECT
+
+deploy:
+  provider: script
+  script: bash scripts/deploy.sh
+  on:
+    branch: master

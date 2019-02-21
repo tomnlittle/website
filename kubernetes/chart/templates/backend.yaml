@@ -41,7 +41,7 @@ spec:
       containers:
       - name: backend
         imagePullPolicy: Always
-        image: tomnlittle/website-backend:{{ .Values.backend.tag }}
+        image: tomnlittle/website-backend:{{ .Values.tag }}
         ports:
         - name: backend
           containerPort: {{ .Values.backend.port }}
