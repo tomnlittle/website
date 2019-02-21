@@ -18,9 +18,9 @@
     "push:containers": "yarn --cwd backend push:container && yarn --cwd frontend push:container",
     "build:kubernetes": "yarn --cwd kubernetes generate",
     "update:kubernetes": "yarn --cwd kubernetes update",
-    "bump": "bump --all --minor"
+    "bump": "bump --commit --tag --push --minor"
   },
-  "version": "1.2.0",
+  "version": "1.3.0",
   "workspaces": [
     "backend",
     "frontend",
