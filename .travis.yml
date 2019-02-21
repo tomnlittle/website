@@ -54,4 +54,4 @@ deploy:
   script: bash scripts/deploy.sh
   on:
     branch: master
-     tags: true
+    tags: true
