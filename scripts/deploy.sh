@@ -1,6 +1,9 @@
 # get the previous tag => https://gist.github.com/kjantzer/98dfa5138ad6e741c24f
 PREVIOUS_TAG=$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-count=1`)
 
+TRAVIS_TAG=v1.2
+echo $PREVIOUS_TAG
+
 # get the changed files since the last tag
 for dir in libraries/*
 do
