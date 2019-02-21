@@ -11,6 +11,7 @@ do
   # bump the libraries if necessary
   if [ $(git --no-pager diff --name-only $TRAVIS_TAG $PREVIOUS_TAG -- $dir) ]
   then
+    echo libraries $dir
     $(cd $dir && npm publish --access public)
   fi
 done

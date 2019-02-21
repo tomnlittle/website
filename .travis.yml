@@ -1,4 +1,6 @@
-language: bash
+language: node_js
+node_js:
+  - "8"
 
 services:
   - docker
@@ -19,6 +21,7 @@ env:
 
 before_script:
 
+  # https://gist.github.com/mjackson/5887963e7d8b8fb0615416c510ae8857
   - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf "$HOME/google-cloud-sdk"; curl https://sdk.cloud.google.com | bash > /dev/null; fi
 
   # This line is critical. We setup the SDK to take precedence in our
