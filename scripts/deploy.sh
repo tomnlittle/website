@@ -19,6 +19,9 @@ done
 # build docker containers
 TAG=$TRAVIS_TAG yarn build:containers
 
+# push docker containers
+TAG=$TRAVIS_TAG yarn push:containers
+
 # update the kubernetes scripts
 TAG=$TRAVIS_TAG yarn build:kubernetes
 

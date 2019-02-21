@@ -36,6 +36,7 @@
   "scripts": {
     "build": "tsc",
     "build:container": "docker build -t tomnlittle/website-backend:$TAG .",
+    "push:container": "docker push tomnlittle/website-backend:$TAG",
     "build:watch": "yarn build --watch --preserveWatchOutput",
     "start": "node build/app",
     "start:watch": "nodemon --config nodemon.json",
