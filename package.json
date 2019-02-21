@@ -19,7 +19,7 @@
     "build:kubernetes": "yarn --cwd kubernetes generate",
     "update:kubernetes": "yarn --cwd kubernetes update"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "workspaces": [
     "backend",
     "frontend",
