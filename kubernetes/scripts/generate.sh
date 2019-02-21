@@ -1,5 +1,3 @@
-TAG=${1:-v1}
-
 helm template \
   --set tag=$TAG \
   --name website \

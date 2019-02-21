@@ -39,7 +39,7 @@ before_script:
   - gcloud container clusters get-credentials website --zone $GCLOUD_ZONE --project $GCLOUD_PROJECT
 
   # auth docker
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 script:
   - echo
