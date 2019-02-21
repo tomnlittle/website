@@ -44,6 +44,8 @@ before_script:
   - chmod 700 get_helm.sh
   - ./get_helm.sh
 
+  - yarn global add version-bump-prompt
+
 script:
   - echo
 
@@ -52,4 +54,4 @@ deploy:
   script: bash scripts/deploy.sh
   on:
     branch: master
-    #  tags: true
+     tags: true

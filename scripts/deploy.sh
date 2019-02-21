@@ -1,9 +1,6 @@
 # get the previous tag => https://gist.github.com/kjantzer/98dfa5138ad6e741c24f
 PREVIOUS_TAG=$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-count=1`)
 
-TRAVIS_TAG=v1.2
-echo $PREVIOUS_TAG
-
 # get the changed files since the last tag
 for dir in libraries/*
 do
@@ -11,7 +8,8 @@ do
   # bump the libraries if necessary
   if [ $(git --no-pager diff --name-only $TRAVIS_TAG $PREVIOUS_TAG -- $dir) ]
   then
-    echo libraries $dir
+    # bump version, build and publish
+    $(cd $dir && bump --minor --commit --push)
     $(cd $dir && npm publish --access public)
   fi
 done
