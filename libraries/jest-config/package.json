@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "jest": "^24.0.0",
+    "ts-jest": "^23.10.4"
+  },
+  "main": "jest.config",
+  "name": "@tomnlittle/jest-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomnlittle/website"
+  },
+  "version": "0.0.1"
+}
