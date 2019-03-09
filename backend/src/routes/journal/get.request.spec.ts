@@ -4,9 +4,9 @@ import { server } from '../../server';
 describe('Get Journal Tests', () => {
 
   it('Should return journals', async () => {
-    const { body } = await supertest(server).get('/journal');
+    const { body } = await supertest(server).get('/api/journal/');
 
-    expect(body.length).toBeDefined();
+    expect(body).toBeDefined();
   });
 
 });
