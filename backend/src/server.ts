@@ -4,7 +4,10 @@ import * as helmet from 'helmet';
 import { OK } from 'http-status-codes';
 import * as morgan from 'morgan';
 
-import { router as journalRouter } from './routes';
+import {
+  getRouter,
+  listRouter,
+} from './routes';
 
 const router = express.Router();
 
@@ -12,7 +15,8 @@ router.use(helmet());
 router.use(cors());
 router.use(morgan('dev'));
 
-router.use('/journal', journalRouter);
+router.use(listRouter);
+router.use(getRouter);
 
 export const server = express().use('/api', router);
 

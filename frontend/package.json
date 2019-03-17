@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@tomnlittle/types": "*",
     "moment": "^2.24.0",
     "react": "16.4.2",
     "react-dom": "16.4.2",
@@ -9,6 +8,7 @@
     "react-router-dom": "4.3.1"
   },
   "devDependencies": {
+    "@tomnlittle/types": "*",
     "@types/moment": "^2.13.0",
     "@types/node": "^10.12.24",
     "@types/react": "^16.4.9",

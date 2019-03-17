@@ -1,10 +1,7 @@
 {
   "extends": "@tomnlittle/tsconfig",
   "compilerOptions": {
-    "outDir": "build",
-    "types": [
-      "jest"
-    ]
+    "outDir": "build"
   },
   "include": [
     "./src/**/*.ts",

@@ -7,7 +7,8 @@ describe('Dropbox - List', () => {
 
     try {
       await listFolder({
-        folder: '/'
+        folder: '/',
+        recursive: false
       });
     } catch (error) {
       expect(error.name).toMatch('StatusCodeError');
