@@ -1,4 +1,4 @@
-import * as request from 'request';
+import * as rp from 'request-promise';
 
 import {
   DROPBOX_ACCESS_TOKEN,
@@ -9,14 +9,19 @@ interface IMethodArguments {
   writeStream: any;
 }
 
-export function getFile({
+export async function getFile({
   id,
   writeStream,
-}: IMethodArguments): any {
-  return request.post('https://content.dropboxapi.com/2/files/download', {
+}: IMethodArguments): Promise<any> {
+  const response = rp('https://content.dropboxapi.com/2/files/download', {
     headers: {
       Authorization: `Bearer ${DROPBOX_ACCESS_TOKEN}`,
       'Dropbox-API-Arg': JSON.stringify({ path: id }),
     },
-  }).pipe(writeStream);
+    json: true
+  });
+
+  response.pipe(writeStream);
+
+  return response;
 }
