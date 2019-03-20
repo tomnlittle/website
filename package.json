@@ -20,7 +20,7 @@
     "update:kubernetes": "yarn --cwd kubernetes update",
     "bump": "bump --commit --tag --push --patch"
   },
-  "version": "1.5.1",
+  "version": "1.5.2",
   "workspaces": [
     "backend",
     "frontend",
