@@ -7,7 +7,7 @@ export abstract class Cache {
 
   public requestGet = (req: Request, res: Response, next: NextFunction) => {
 
-    const object = this.get(req.path);
+    const object = this.get(req.originalUrl);
 
     if (object) {
       return res.json(object);
@@ -17,6 +17,6 @@ export abstract class Cache {
   }
 
   public requestPut = (req: Request, data: any) => {
-    this.put(req.path, data);
+    this.put(req.originalUrl, data);
   }
 }
