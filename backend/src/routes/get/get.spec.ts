@@ -18,7 +18,7 @@ describe('Get Journal Request', () => {
     const { status } = await supertest(server)
                             .get('/api/get')
                             .query({
-                              path: '/journals/01-22-17/index.md'
+                              path: '/journals/01-22-17'
                             });
 
     expect(status).toEqual(200);

@@ -14,10 +14,20 @@ router.get('/get', async (req, res) => {
 
   try {
 
-    // download file
-    const response = await getFile({
-      id: req.query.path,
+    // get md file
+    const indexFile = await getFile({
+      id: req.query.path + '/index.md',
     });
+
+    // get config
+    const config = await getFile({
+      id: req.query.path + '/config.json',
+    });
+
+    const response = {
+      config,
+      file: indexFile
+    };
 
     res.json(response);
 
