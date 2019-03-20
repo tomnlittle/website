@@ -20,18 +20,41 @@ export class Timeline extends React.Component<ILandingProps> {
 
   public async componentWillMount() {
 
+    // TODO: wtf was I thinking with the below
+
     const data = await request({
       url: `${REACT_APP_API_PROTOCOL}://${REACT_APP_API_ADDRESS}/api/list`,
       method: 'GET'
     });
 
     const fileList = await data.json();
-    console.log({ fileList })
-    // const years = Object.keys(body).sort((prev, curr) => curr < prev ? -1 : 1);
+
+    const journals = {};
+
+    for (let file of fileList) {
+
+      const fileRes = await request({
+        url: `${REACT_APP_API_PROTOCOL}://${REACT_APP_API_ADDRESS}/api/get`,
+        qs: {
+          path: file.path
+        },
+        method: 'GET'
+      });
+
+      const fileData = await fileRes.json();
+
+      if (!journals.hasOwnProperty(file.year)) {
+        journals[file.year] = [];
+      }
+
+      journals[file.year].push(fileData);
+    }
+
+    const years = Object.keys(journals).sort((prev, curr) => curr < prev ? -1 : 1);
 
     this.setState({
-      journals: {},
-      years: []
+      journals,
+      years
     });
   }
 
