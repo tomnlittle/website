@@ -14,11 +14,11 @@ describe('Get Journal Request', () => {
     expect(status).toEqual(400);
   });
 
-  it('Valid Id - check file dowload', async () => {
+  it('Valid Id - check file download', async () => {
     const { status } = await supertest(server)
                             .get('/api/get')
                             .query({
-                              path: 'id:1mx41MPd2NAAAAAAAAAAVg'
+                              path: '/journals/01-22-17/index.md'
                             });
 
     expect(status).toEqual(200);

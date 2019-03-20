@@ -2,7 +2,7 @@ import * as rp from 'request-promise';
 
 import {
   DROPBOX_ACCESS_TOKEN,
-} from '../../config';
+} from '../config';
 
 import { IDropboxListResponse } from './IDropboxListResponse';
 

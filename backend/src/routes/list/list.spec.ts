@@ -72,8 +72,9 @@ jest.mock('../../dropbox', () => ({
 describe('List Journals', () => {
 
   it('Success - return journal file list', async () => {
-    const { body } = await supertest(server).get('/api/list');
+    const { status, body } = await supertest(server).get('/api/list');
 
+    expect(status).toBe(200);
     expect(body).toBeDefined();
   });
 

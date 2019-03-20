@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 interface IDropboxEnv {
   DROPBOX_ACCESS_TOKEN: string;
 }

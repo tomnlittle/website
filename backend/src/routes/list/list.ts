@@ -4,7 +4,7 @@ import { listFolder } from '../../dropbox';
 
 const router = Router();
 
-router.get('/list', async (req, res) => {
+router.get('/list', async (_, res) => {
 
   const rootFolder = await listFolder({
     folder: '/journals',

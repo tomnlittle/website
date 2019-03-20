@@ -21,16 +21,17 @@ export class Timeline extends React.Component<ILandingProps> {
   public async componentWillMount() {
 
     const data = await request({
-      url: `${REACT_APP_API_PROTOCOL}://${REACT_APP_API_ADDRESS}/api/journal`,
+      url: `${REACT_APP_API_PROTOCOL}://${REACT_APP_API_ADDRESS}/api/list`,
       method: 'GET'
     });
 
-    const body = await data.json();
-    const years = Object.keys(body).sort((prev, curr) => curr < prev ? -1 : 1);
+    const fileList = await data.json();
+    console.log({ fileList })
+    // const years = Object.keys(body).sort((prev, curr) => curr < prev ? -1 : 1);
 
     this.setState({
-      journals: body,
-      years,
+      journals: {},
+      years: []
     });
   }
 
