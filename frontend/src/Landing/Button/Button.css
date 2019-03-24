@@ -11,6 +11,8 @@
   border-radius: 5px;
   color: #373E5C;
   background: transparent;
+  outline:none;
+  cursor: pointer;
 }
 
 .Button:hover, .Button:active .Button:focus {

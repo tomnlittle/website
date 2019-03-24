@@ -9,9 +9,14 @@
   background-color: white;
 }
 
-.Landing .Left .Contact a, .Landing .Left .Contact a:visited {
+.Landing .Left p a, .Landing .Left p a:visited {
   text-decoration: none;
   color: #282c34;
+}
+
+.Landing .Left .Links a {
+  margin: 5px;
+  padding: 5px;
 }
 
 .Landing .Right {
