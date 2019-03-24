@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { IJournal } from '@tomnlittle/types';
 
-import { REACT_APP_API_ADDRESS, REACT_APP_API_PROTOCOL } from '../../../../config/app';
-import { JournalEntry } from '../../../../components';
-import { request } from '../../../../utils';
-import { ILandingProps } from '../../ILandingProps';
+import { REACT_APP_API_ADDRESS, REACT_APP_API_PROTOCOL } from '../config/app';
+import { JournalEntry } from '../components';
+import { request } from '../utils';
+import { ILandingProps } from './ILandingProps';
 import './Timeline.css';
 
 export class Timeline extends React.Component<ILandingProps> {

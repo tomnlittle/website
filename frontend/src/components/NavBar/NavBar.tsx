@@ -7,7 +7,7 @@ export class NavBar extends React.Component {
   public render(): JSX.Element {
     return (
       <div className={'navbar'}>
-        <Left/>
+        {/* <Left/> */}
         <Right/>
       </div>
     );
