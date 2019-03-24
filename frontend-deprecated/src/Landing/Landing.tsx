@@ -1,6 +1,6 @@
 import * as React from 'react';
 import anime from 'animejs'
-
+import * as ProfilePic from './profile.jpg';
 import './Landing.css';
 
 export class Landing extends React.Component {
@@ -21,17 +21,20 @@ export class Landing extends React.Component {
   public render(): JSX.Element {
     return (
       <div className={'landing'}>
-        {/* Left side */}
-        <div className={'left'}>
 
+        {/* Left side */}
+
+        <div className={'left'}>
+          <img src={ProfilePic} alt={'Profile Picture'}/>
+          <h1>Thomas Northall-Little</h1>
         </div>
 
         {/* Right Side */}
+
         <div className={'right'}>
 
-
-
         </div>
+
       </div>
     );
   }
