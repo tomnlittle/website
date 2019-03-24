@@ -1,22 +1,71 @@
-.landing {
+.Landing {
   display: flex;
   height: 100vh;
   text-align: center;
 }
 
-.landing .left {
+.Landing .Left {
   width: 80%;
   background-color: white;
 }
 
-.landing .right {
+.Landing .Right {
   width: 100%;
-  background-color: #333;
+  height: 100%;
+  background-color: black;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.landing img {
-  height: 150px;
-  border-radius: 75px;
+.Landing .Profile-Pic {
+  height: 200px;
+  border-radius: 100px;
   margin: 20px auto;
   display: block;
 }
+
+.Landing .Right .Side-Image {
+  width: 100%;
+  vertical-align: middle;
+
+  animation: pulse 10s infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */

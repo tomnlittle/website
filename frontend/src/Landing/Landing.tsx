@@ -1,41 +1,32 @@
-import * as React from 'react';
-import anime from 'animejs'
-import * as ProfilePic from './profile.jpg';
-import './Landing.css';
+import React from "react";
 
-export class Landing extends React.Component {
+import Button from "./Button/Button";
+import "./Landing.css";
+import ProfilePic from "./profile.jpg";
+import SideImage from "./SideImage.jpg";
 
-  public constructor(props) {
-    super(props);
+export default class Landing extends React.Component {
 
-    // console.log({ anime})
-    // anime({
-    //   targets: 'div',
-    //   translateX: 250,
-    //   rotate: '1turn',
-    //   backgroundColor: '#FFF',
-    //   duration: 800
-    // });
-
-  }
   public render(): JSX.Element {
     return (
-      <div className={'landing'}>
+      <div className={"Landing"}>
 
         {/* Left side */}
 
-        <div className={'left'}>
-          <img src={ProfilePic} alt={'Profile Picture'}/>
+        <div className={"Left"}>
+          <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"}/>
           <h1>Thomas Northall-Little</h1>
+
+          <Button> Project Timeline </Button>
         </div>
 
         {/* Right Side */}
 
-        <div className={'right'}>
-
+        <div className={"Right"}>
+          <img src={SideImage} className="Side-Image" alt={""}/>
         </div>
 
-      </div>
+      </div >
     );
   }
 }

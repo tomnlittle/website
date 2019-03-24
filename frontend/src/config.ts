@@ -5,6 +5,6 @@ interface IEnv {
 }
 
 export const {
-  REACT_APP_API_ADDRESS = 'localhost:3000',
-  REACT_APP_API_PROTOCOL = 'http'
-}: IEnv = <any> process.env;
+  REACT_APP_API_ADDRESS = "localhost:3000",
+  REACT_APP_API_PROTOCOL = "http",
+}: IEnv = process.env as any;
