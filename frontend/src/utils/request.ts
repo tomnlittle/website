@@ -12,7 +12,7 @@ function queryObjectToString(data: any) {
     .join("&");
 }
 
-export async function request({
+export default async function request({
   url,
   method = "GET",
   qs,

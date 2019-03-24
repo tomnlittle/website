@@ -1,10 +1,14 @@
 import React from "react";
-
 import "./Button.css";
 
-export default function Button(props: any) {
+interface IButtonProps {
+  onClick: any;
+  children: any;
+}
+
+export default function Button(props: IButtonProps) {
   return (
-    <button className="Button">
+    <button className="Button" onClick={props.onClick}>
       { props.children }
     </button>
   );
