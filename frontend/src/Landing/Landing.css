@@ -9,6 +9,11 @@
   background-color: white;
 }
 
+.Landing .Left .Contact a, .Landing .Left .Contact a:visited {
+  text-decoration: none;
+  color: #282c34;
+}
+
 .Landing .Right {
   width: 100%;
   height: 100%;

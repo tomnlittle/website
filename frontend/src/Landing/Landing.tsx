@@ -16,6 +16,7 @@ export default class Landing extends React.Component {
         <div className={"Left"}>
           <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"}/>
           <h1>Thomas Northall-Little</h1>
+          <p className="Contact"> <a href="mailto:contact@tomnlittle.com"> contact@tomnlittle.com </a> </p>
 
           <Button> Project Timeline </Button>
         </div>
