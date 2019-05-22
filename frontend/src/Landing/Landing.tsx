@@ -4,6 +4,7 @@ import { REACT_APP_API_ADDRESS, REACT_APP_API_PROTOCOL } from "../config";
 import request from "../utils/request";
 
 import Button from "./Button/Button";
+import Graphic from "./Graphic/Graphic";
 import "./Landing.css";
 import Panel from "./Panel/Panel";
 import ProfilePic from "./Profile.jpg";
@@ -18,16 +19,6 @@ export default class Landing extends React.Component<{}, ILandingState> {
   constructor(props: any) {
     super(props);
 
-    request({
-      method: "GET",
-      url: `${REACT_APP_API_PROTOCOL}://${REACT_APP_API_ADDRESS}/api/list`,
-    }).then((data) => data.json())
-      .then((result) => {
-      console.log({ result });
-    }).catch((error) => {
-      console.log({ error });
-    });
-
     this.state = {
       showPanel: false,
     };
@@ -37,9 +28,7 @@ export default class Landing extends React.Component<{}, ILandingState> {
     return (
       <div className={"Landing"}>
 
-        {/* Left side */}
-
-        <div className={"Left"}>
+        <div className={"info"}>
           <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"}/>
           <h1>Thomas Northall-Little</h1>
 
@@ -49,18 +38,10 @@ export default class Landing extends React.Component<{}, ILandingState> {
             <a href="https://github.com/tomnlittle">GitHub</a>
           </p>
 
-          <Button onClick={() => this.onPanelClick()}> Timeline </Button>
+          {/* <Button onClick={() => this.onPanelClick()}> Timeline </Button> */}
           <Button onClick={() => this.onPanelClick()}> Projects </Button>
           <Button onClick={() => this.onPanelClick()}> Experience </Button>
-        </div>
 
-        {/* Right Side */}
-
-        <div className={"Right"}>
-          <img src={SideImage} className="Side-Image" alt={""}/>
-          { this.state.showPanel &&
-            <Panel></Panel>
-          }
         </div>
 
       </div >

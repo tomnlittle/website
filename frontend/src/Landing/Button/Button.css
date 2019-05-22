@@ -1,22 +1,25 @@
 .Button {
-  width: 70%;
-  height: 5vw;
+
   margin: 10px;
+  padding: 10px 20px;
 
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 500;
 
   border: 1px solid #373E5C;
-  border-radius: 5px;
+  border-radius: 2px;
   color: #373E5C;
-  background: transparent;
+  /* background-color: #373E5C; */
+
   outline:none;
   cursor: pointer;
+
+  transition: 0.2s;
 }
 
-.Button:hover, .Button:active .Button:focus {
-  border: 2px dashed #B9009A;
+.Button:hover {
+  border: 1px solid #B9009A;
   color: #B9009A;
-  background: transparent;
+  transform: scale(1.02);
 }
