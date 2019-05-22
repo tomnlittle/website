@@ -1,18 +1,13 @@
-.Landing {
-  display: flex;
-  /* height: 100vh; */
-  text-align: center;
-  /* background-color: black; */
-}
-
 .info {
-  width: 60%;
-  background-color: white;
+  z-index: 10;
+
+  display: block;
+
+  text-align: center;
+  background-color: transparent;
 
   margin: auto;
   padding: 40px;
-
-  border-radius: 4px;
 
   animation-duration: 1s;
   animation-name: fadeIn;

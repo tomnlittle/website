@@ -1,10 +1,5 @@
-import { create } from "domain";
 import React, { Component } from "react";
-
-const NUM_PARTICLES = 100;
-
-const WIDTH = 640;
-const HEIGHT = 425;
+import "./Graphic.css";
 
 interface IParticle {
   x: number;
@@ -20,6 +15,8 @@ interface IGraphicState {
   numParticles: number;
   maxVelocity: number;
   maxSize: number;
+  width: number;
+  height: number;
 }
 
 function randomNumber(min: number, max: number) {
@@ -44,33 +41,37 @@ export default class Graphic extends Component <{}, IGraphicState> {
     super(props);
 
     this.state = {
+      height: 1080,
       maxSize: 2,
       maxVelocity: 3,
       numParticles: 30,
       particles: [],
+      width: 1920,
     };
 
     this.loop = this.loop.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
 
+  public componentWillMount() {
+    this.updateDimensions();
   }
 
   public componentDidMount() {
-
-    console.log("mounting");
 
     const particles: IParticle[] = [];
 
     // generate all the random particles initial states
 
-    for (let i = 1; i < this.state.numParticles; i++) {
+    for (let i = 1; i <= this.state.numParticles; i++) {
 
       const pt: IParticle = {
         rgba: "black",
         size: randomNumber(0.1, this.state.maxSize),
         velocityX: randomNumber(-this.state.maxVelocity, this.state.maxVelocity),
         velocityY: randomNumber(-this.state.maxVelocity, this.state.maxVelocity),
-        x: randomNumber(0, WIDTH),
-        y: randomNumber(0, HEIGHT),
+        x: randomNumber(0, this.state.width),
+        y: randomNumber(0, this.state.height),
       };
 
       particles.push(pt);
@@ -81,6 +82,16 @@ export default class Graphic extends Component <{}, IGraphicState> {
     });
 
     requestAnimationFrame(this.loop);
+
+    // resize listener
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  public updateDimensions() {
+    this.setState({
+      height: window.innerHeight,
+      width: window.innerWidth,
+    });
   }
 
   public loop() {
@@ -94,8 +105,12 @@ export default class Graphic extends Component <{}, IGraphicState> {
     // @ts-ignore
     const context = canvas.getContext("2d");
 
-    context.clearRect(0, 0, WIDTH, HEIGHT);
+    context.clearRect(0, 0, this.state.width, this.state.height);
     context.save();
+
+    // update the canvas size
+    context.canvas.width = this.state.width;
+    context.canvas.height = this.state.height;
 
     this.state.particles.forEach((particle) => {
 
@@ -104,12 +119,12 @@ export default class Graphic extends Component <{}, IGraphicState> {
       particle.x += particle.velocityX;
       particle.y += particle.velocityY;
 
-      if (particle.x < 0 || particle.x > WIDTH) {
+      if (particle.x < 0 || particle.x > this.state.width) {
         particle.velocityX = 1 - particle.velocityX;
         particle.x = 0;
       }
 
-      if (particle.y < 0 || particle.y > HEIGHT) {
+      if (particle.y < 0 || particle.y > this.state.height) {
         particle.velocityY = 1 - particle.velocityY;
         particle.y = 0;
       }
@@ -120,7 +135,7 @@ export default class Graphic extends Component <{}, IGraphicState> {
 
   public render() {
     return (
-      <canvas ref="canvas" width={WIDTH} height={HEIGHT} />
+      <canvas className="particle" ref="canvas"/>
     );
   }
 }

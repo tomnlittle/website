@@ -21,10 +21,10 @@ export default class Landing extends React.Component<{}, ILandingState> {
 
   public render(): JSX.Element {
     return (
-      <div className={"Landing"}>
+      <div>
 
         <Graphic/>
-{/*
+
         <div className={"info"}>
           <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"}/>
           <h1>Thomas Northall-Little</h1>
@@ -38,7 +38,7 @@ export default class Landing extends React.Component<{}, ILandingState> {
           <Button onClick={() => this.onPanelClick()}> Projects </Button>
           <Button onClick={() => this.onPanelClick()}> Experience </Button>
 
-        </div> */}
+        </div>
 
       </div >
     );
