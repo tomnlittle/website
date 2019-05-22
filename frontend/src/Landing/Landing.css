@@ -1,12 +1,16 @@
+.landing {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 .info {
-  z-index: 10;
-
   display: block;
-
   text-align: center;
+
   background-color: transparent;
 
-  margin: auto;
+  margin: 0 auto;
   padding: 40px;
 
   animation-duration: 1s;

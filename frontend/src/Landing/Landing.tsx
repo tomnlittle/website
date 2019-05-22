@@ -21,7 +21,7 @@ export default class Landing extends React.Component<{}, ILandingState> {
 
   public render(): JSX.Element {
     return (
-      <div>
+      <div className="landing">
 
         <Graphic/>
 
