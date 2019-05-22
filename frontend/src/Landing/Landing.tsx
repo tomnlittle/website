@@ -1,14 +1,9 @@
 import React from "react";
 
-import { REACT_APP_API_ADDRESS, REACT_APP_API_PROTOCOL } from "../config";
-import request from "../utils/request";
-
 import Button from "./Button/Button";
 import Graphic from "./Graphic/Graphic";
 import "./Landing.css";
-import Panel from "./Panel/Panel";
 import ProfilePic from "./Profile.jpg";
-import SideImage from "./SideImage.jpg";
 
 interface ILandingState {
   showPanel: boolean;
@@ -28,6 +23,8 @@ export default class Landing extends React.Component<{}, ILandingState> {
     return (
       <div className={"Landing"}>
 
+        <Graphic/>
+{/*
         <div className={"info"}>
           <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"}/>
           <h1>Thomas Northall-Little</h1>
@@ -38,11 +35,10 @@ export default class Landing extends React.Component<{}, ILandingState> {
             <a href="https://github.com/tomnlittle">GitHub</a>
           </p>
 
-          {/* <Button onClick={() => this.onPanelClick()}> Timeline </Button> */}
           <Button onClick={() => this.onPanelClick()}> Projects </Button>
           <Button onClick={() => this.onPanelClick()}> Experience </Button>
 
-        </div>
+        </div> */}
 
       </div >
     );
@@ -50,7 +46,7 @@ export default class Landing extends React.Component<{}, ILandingState> {
 
   private onPanelClick() {
     const newState = !this.state.showPanel;
-    console.log({ newState });
+    // console.log({ newState });
     this.setState({
       showPanel: newState,
     });
