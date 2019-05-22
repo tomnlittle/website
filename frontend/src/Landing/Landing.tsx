@@ -35,8 +35,8 @@ export default class Landing extends React.Component<{}, ILandingState> {
             <a href="https://github.com/tomnlittle">GitHub</a>
           </p>
 
-          <Button onClick={() => this.onPanelClick()}> Projects </Button>
-          <Button onClick={() => this.onPanelClick()}> Experience </Button>
+          {/* <Button onClick={() => this.onPanelClick()}> Projects </Button> */}
+          {/* <Button onClick={() => this.onPanelClick()}> Experience </Button> */}
 
         </div>
 
