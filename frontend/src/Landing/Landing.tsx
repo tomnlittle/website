@@ -28,6 +28,7 @@ export default class Landing extends React.Component<{}, ILandingState> {
         <div className={"info"}>
           <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"}/>
           <h1>Thomas Northall-Little</h1>
+          <p className="byline">Software Developer at Nearmap</p>
 
           <p> <a href="mailto:contact@tomnlittle.com"> contact@tomnlittle.com </a> </p>
           <p className="Links">

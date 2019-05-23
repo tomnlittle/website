@@ -4,7 +4,15 @@
   align-items: center;
 }
 
-.info {
+.landing h1 {
+  margin-bottom: 4px;
+}
+
+.landing .byline {
+  margin-top: 4px;
+}
+
+.landing .info {
   display: block;
   text-align: center;
 
@@ -17,21 +25,21 @@
   animation-name: fadeIn;
 }
 
-.info p a, .info p a:visited {
+.landing .info p a, .landing .info p a:visited {
   text-decoration: none;
   color: #282c34;
 }
 
-.info p a:hover, .info p a:visited:hover {
+.landing .info p a:hover, .landing .info p a:visited:hover {
   color: #B9009A;
 }
 
-.info .Links a {
+.landing .info .Links a {
   margin: 5px;
   padding: 5px;
 }
 
-.Profile-Pic {
+.landing .Profile-Pic {
   height: 175px;
   border-radius: 100px;
   margin: 0px auto;

@@ -15,24 +15,9 @@ interface IGraphicState {
   numParticles: number;
   maxVelocity: number;
   maxSize: number;
+  minSize: number;
   width: number;
   height: number;
-}
-
-function randomNumber(min: number, max: number) {
-  return (Math.random() * (max - min)) + min;
-}
-
-function drawParticle(pt: IParticle, context: any) {
-  const size = pt.size;
-
-  context.beginPath();
-  context.arc(pt.x, pt.y, size, 0, 2 * Math.PI);
-  context.strokeStyle = pt.rgba;
-  context.stroke();
-
-  context.fillStyle = pt.rgba;
-  context.fill();
 }
 
 export default class Graphic extends Component <{}, IGraphicState> {
@@ -44,6 +29,7 @@ export default class Graphic extends Component <{}, IGraphicState> {
       height: 1080,
       maxSize: 2,
       maxVelocity: 3,
+      minSize: 0.1,
       numParticles: 30,
       particles: [],
       width: 1920,
@@ -61,17 +47,24 @@ export default class Graphic extends Component <{}, IGraphicState> {
 
     const particles: IParticle[] = [];
 
-    // generate all the random particles initial states
+    const {
+      height,
+      maxSize,
+      minSize,
+      maxVelocity,
+      numParticles,
+      width,
+    } = this.state;
 
-    for (let i = 1; i <= this.state.numParticles; i++) {
+    for (let i = 1; i <= numParticles; i++) {
 
       const pt: IParticle = {
         rgba: "black",
-        size: randomNumber(0.1, this.state.maxSize),
-        velocityX: randomNumber(-this.state.maxVelocity, this.state.maxVelocity),
-        velocityY: randomNumber(-this.state.maxVelocity, this.state.maxVelocity),
-        x: randomNumber(0, this.state.width),
-        y: randomNumber(0, this.state.height),
+        size: randomNumber(minSize, maxSize),
+        velocityX: randomNumber(-maxVelocity, maxVelocity),
+        velocityY: randomNumber(-maxVelocity, maxVelocity),
+        x: width / 2,
+        y: height / 2,
       };
 
       particles.push(pt);
@@ -85,6 +78,10 @@ export default class Graphic extends Component <{}, IGraphicState> {
 
     // resize listener
     window.addEventListener("resize", this.updateDimensions);
+  }
+
+  public componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
   }
 
   public updateDimensions() {
@@ -105,12 +102,17 @@ export default class Graphic extends Component <{}, IGraphicState> {
     // @ts-ignore
     const context = canvas.getContext("2d");
 
-    context.clearRect(0, 0, this.state.width, this.state.height);
+    const {
+      width,
+      height,
+    } = this.state;
+
+    context.clearRect(0, 0, width, height);
     context.save();
 
     // update the canvas size
-    context.canvas.width = this.state.width;
-    context.canvas.height = this.state.height;
+    context.canvas.width = width;
+    context.canvas.height = height;
 
     this.state.particles.forEach((particle) => {
 
@@ -119,14 +121,14 @@ export default class Graphic extends Component <{}, IGraphicState> {
       particle.x += particle.velocityX;
       particle.y += particle.velocityY;
 
-      if (particle.x < 0 || particle.x > this.state.width) {
-        particle.velocityX = 1 - particle.velocityX;
-        particle.x = 0;
+      if (particle.x < 0 || particle.x > width) {
+        particle.velocityX = -particle.velocityX;
+        particle.x = particle.x < 0 ? 1 : width;
       }
 
-      if (particle.y < 0 || particle.y > this.state.height) {
-        particle.velocityY = 1 - particle.velocityY;
-        particle.y = 0;
+      if (particle.y < 0 || particle.y > height) {
+        particle.velocityY = -particle.velocityY;
+        particle.y = particle.y < 0 ? 1 : height;
       }
 
       return particle;
@@ -138,4 +140,20 @@ export default class Graphic extends Component <{}, IGraphicState> {
       <canvas className="particle" ref="canvas"/>
     );
   }
+}
+
+function randomNumber(min: number, max: number) {
+  return (Math.random() * (max - min)) + min;
+}
+
+function drawParticle(pt: IParticle, context: any) {
+  const size = pt.size;
+
+  context.beginPath();
+  context.arc(pt.x, pt.y, size, 0, 2 * Math.PI);
+  context.strokeStyle = pt.rgba;
+  context.stroke();
+
+  context.fillStyle = pt.rgba;
+  context.fill();
 }
