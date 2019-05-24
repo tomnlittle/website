@@ -4,8 +4,28 @@
   align-items: center;
 }
 
-.landing h1 {
-  margin-bottom: 4px;
+.landing .Navbar {
+  position: absolute;
+  top: 0;
+}
+
+.landing .Navbar ul {
+  list-style-type: none;
+  margin: 40px;
+  padding: 0;
+}
+
+.landing .Navbar ul li {
+  display: inline;
+  margin: 20px;
+}
+
+.landing .Navbar ul li a, .landing .Navbar ul li a:visited {
+  text-transform: uppercase;
+}
+
+.landing .Navbar ul li a:hover, .landing .Navbar ul li a:visited:hover {
+  text-transform: uppercase;
 }
 
 .landing .byline {
@@ -25,22 +45,13 @@
   animation-name: fadeIn;
 }
 
-.landing .info p a, .landing .info p a:visited {
-  text-decoration: none;
-  color: #282c34;
-}
-
-.landing .info p a:hover, .landing .info p a:visited:hover {
-  color: #B9009A;
-}
-
 .landing .info .Links a {
   margin: 5px;
   padding: 5px;
 }
 
 .landing .Profile-Pic {
-  height: 175px;
+  height: 150px;
   border-radius: 100px;
   margin: 0px auto;
   display: block;

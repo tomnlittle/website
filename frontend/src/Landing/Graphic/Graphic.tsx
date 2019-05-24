@@ -59,7 +59,7 @@ export default class Graphic extends Component <{}, IGraphicState> {
     for (let i = 1; i <= numParticles; i++) {
 
       const pt: IParticle = {
-        rgba: "black",
+        rgba: randomColour(),
         size: randomNumber(minSize, maxSize),
         velocityX: randomNumber(-maxVelocity, maxVelocity),
         velocityY: randomNumber(-maxVelocity, maxVelocity),
@@ -142,8 +142,14 @@ export default class Graphic extends Component <{}, IGraphicState> {
   }
 }
 
-function randomNumber(min: number, max: number) {
+function randomNumber(min: number, max: number): number {
   return (Math.random() * (max - min)) + min;
+}
+
+function randomColour(): string {
+  const rand = randomNumber(0, 10);
+
+  return rand < 5 ? "#282c34" : "#B9009A";
 }
 
 function drawParticle(pt: IParticle, context: any) {

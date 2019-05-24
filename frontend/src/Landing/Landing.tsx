@@ -5,11 +5,15 @@ import Graphic from "./Graphic/Graphic";
 import "./Landing.css";
 import ProfilePic from "./Profile.jpg";
 
+interface ILandingProps {
+  handleClick: any;
+}
+
 interface ILandingState {
   showPanel: boolean;
 }
 
-export default class Landing extends React.Component<{}, ILandingState> {
+export default class Landing extends React.Component<ILandingProps, ILandingState> {
 
   constructor(props: any) {
     super(props);
@@ -21,35 +25,33 @@ export default class Landing extends React.Component<{}, ILandingState> {
 
   public render(): JSX.Element {
     return (
-      <div className="landing">
+      <div className="landing" id="home">
 
         <Graphic/>
+
+        <div className="Navbar">
+          <ul>
+            {/* <li><a href="">Home</a></li> */}
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
 
         <div className={"info"}>
           <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"}/>
           <h1>Thomas Northall-Little</h1>
-          <p className="byline">Software Developer at Nearmap</p>
+          <p className="byline">Software Engineer at Nearmap</p>
 
-          <p> <a href="mailto:contact@tomnlittle.com"> contact@tomnlittle.com </a> </p>
+          <p> <a href="mailto:contact@tomnlittle.com">contact@tomnlittle.com</a></p>
           <p className="Links">
             <a href="https://www.linkedin.com/in/thomas-northall-little-073604111">LinkedIn</a>
             <a href="https://github.com/tomnlittle">GitHub</a>
           </p>
 
-          {/* <Button onClick={() => this.onPanelClick()}> Projects </Button> */}
-          {/* <Button onClick={() => this.onPanelClick()}> Experience </Button> */}
+          {/* <Button onClick={() => this.props.handleClick()}> About </Button> */}
+          {/* <Button onClick={() => this.props.handleClick()}> Experience </Button> */}
 
         </div>
-
-      </div >
+      </div>
     );
-  }
-
-  private onPanelClick() {
-    const newState = !this.state.showPanel;
-    // console.log({ newState });
-    this.setState({
-      showPanel: newState,
-    });
   }
 }

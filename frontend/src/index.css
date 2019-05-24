@@ -8,8 +8,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   height: 100vh;
+  letter-spacing: 0.4px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #282c34;
+}
+
+a:hover, a:visited:hover {
+  color: #B9009A;
 }
