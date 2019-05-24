@@ -5,15 +5,11 @@ import Graphic from "./Graphic/Graphic";
 import "./Landing.css";
 import ProfilePic from "./Profile.jpg";
 
-interface ILandingProps {
-  handleClick: any;
-}
-
 interface ILandingState {
   showPanel: boolean;
 }
 
-export default class Landing extends React.Component<ILandingProps, ILandingState> {
+export default class Landing extends React.Component<{}, ILandingState> {
 
   constructor(props: any) {
     super(props);
