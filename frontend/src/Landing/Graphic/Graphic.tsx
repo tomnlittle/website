@@ -29,8 +29,8 @@ export default class Graphic extends Component <{}, IGraphicState> {
       height: 1080,
       maxSize: 2,
       maxVelocity: 3,
-      minSize: 0.1,
-      numParticles: 30,
+      minSize: 0.3,
+      numParticles: 20,
       particles: [],
       width: 1920,
     };
