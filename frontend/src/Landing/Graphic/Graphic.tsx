@@ -111,8 +111,15 @@ export default class Graphic extends Component <{}, IGraphicState> {
     context.save();
 
     // update the canvas size
-    context.canvas.width = width;
-    context.canvas.height = height;
+    // https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
+    context.canvas.style.width = width + "px";
+    context.canvas.style.height = height + "px";
+
+    const scale = window.devicePixelRatio;
+    context.canvas.width = width * scale;
+    context.canvas.height = height * scale;
+
+    context.scale(scale, scale);
 
     this.state.particles.forEach((particle) => {
 
