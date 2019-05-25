@@ -12,7 +12,21 @@ export default class About extends React.Component<{}, {}> {
     return (
         <div className="About" id="about">
           <h1>About</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper sit amet risus nullam eget felis eget nunc lobortis. Nunc sed id semper risus in hendrerit gravida rutrum. Sollicitudin tempor id eu nisl nunc. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget. Vitae elementum curabitur vitae nunc sed velit. Amet massa vitae tortor condimentum lacinia quis vel eros. In fermentum et sollicitudin ac orci phasellus. Commodo elit at imperdiet dui accumsan. Risus in hendrerit gravida rutrum quisque non tellus orci ac. Nunc faucibus a pellentesque sit amet porttitor. Sapien eget mi proin sed. At in tellus integer feugiat scelerisque varius morbi enim. Enim facilisis gravida neque convallis a cras semper. Tortor id aliquet lectus proin nibh nisl condimentum. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Velit ut tortor pretium viverra suspendisse potenti nullam. Purus faucibus ornare suspendisse sed nisi lacus sed. Proin libero nunc consequat interdum varius sit amet mattis vulputate.</p>
+          <p> Around the age of 10 I had started writing shell scripts for my computer; learning the absolute
+              fundamentals to programming. It wasn't until my teacher introduced me to Ruby that
+              I truly started to understand the freedom that programming could offer.
+              As a teenager I was experimenting with Java in Minecraft, making small addons for the game gave me my
+              first foray into graphical design and object oriented programming.
+          </p>
+
+          <br/>
+
+          <p>
+            Now, having completed my Computer Science degree from UNSW. I have work experience in two startups,
+            working with technologies such as Kubernetes and Terraform in Devops roles, to working with Typescript,
+            Java and Python in developer roles.
+          </p>
+
         </div>
     );
   }
