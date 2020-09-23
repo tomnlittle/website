@@ -1,6 +1,6 @@
 import React from "react";
 
-import Graphic from "./Graphic/Graphic";
+import Graphic from "../Components/Graphic/Graphic";
 import "./Landing.css";
 import ProfilePic from "./profile.jpg";
 
@@ -20,7 +20,7 @@ export default class Landing extends React.Component<{}, ILandingState> {
 
   public render(): JSX.Element {
     return (
-      <div className="landing" id="home">
+      <div className="landing">
 
         <Graphic/>
 
