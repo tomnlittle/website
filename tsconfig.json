@@ -1,21 +1,3 @@
-// {
-//     "compilerOptions": {
-//         "lib": [
-//             "es2017",
-//             "es2018.promise",
-//             "dom" // Don't remove this (needed to compile superagent)
-//         ],
-//         "target": "es2017",
-//         "module": "commonjs",
-//         "moduleResolution": "node",
-//         "pretty": true,
-//         "resolveJsonModule": true,
-//         "sourceMap": true,
-//         "strict": true,
-//         "esModuleInterop": true
-//     }
-// }
-
 {
     "compilerOptions": {
       "declaration": false,

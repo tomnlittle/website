@@ -5,10 +5,6 @@
   "publisher": "tomnlittle",
   "repository": "git@github.com:tomnlittle/website.git",
   "scripts": {
-    "backend:start": "yarn --cwd backend start",
-    "backend:test": "yarn --cwd backend test",
-    "backend:test:watch": "yarn --cwd backend test:watch",
-    "backend:watch": "yarn --cwd backend start:watch",
     "docker:logs": "docker-compose logs -f",
     "docker:restart": "yarn docker:stop && yarn docker:start",
     "docker:start": "docker-compose -f docker-compose.yaml up -d",
@@ -16,13 +12,10 @@
     "frontend:start": "yarn --cwd frontend start",
     "build:containers": "yarn --cwd backend build:container && yarn --cwd frontend build:container",
     "push:containers": "yarn --cwd backend push:container && yarn --cwd frontend push:container",
-    "build:kubernetes": "yarn --cwd kubernetes generate",
-    "update:kubernetes": "yarn --cwd kubernetes update",
     "bump": "bump --commit --tag --push --patch"
   },
   "version": "1.5.2",
   "workspaces": [
-    "backend",
     "frontend",
     "libraries/*"
   ]
