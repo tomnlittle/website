@@ -7,11 +7,3 @@
   <br>
 </h1>
 
-## Tests
-Tests are run using jest and are automatically started with the rest of the stack.
-
-## Acknowledgements
-
-* [Dropbox Api](https://www.dropbox.com/developers/documentation/http/overview)
-
----
