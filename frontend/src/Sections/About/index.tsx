@@ -1,8 +1,8 @@
 import React from "react";
-import {Card } from '../Components/Card';
+import {Card } from '../../Components/Card';
 import "./index.css";
 
-export default function About() {
+export function About() {
   return (
     <div className='about-container'>
       <div className="about" id="about">

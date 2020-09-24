@@ -1,7 +1,7 @@
 import React from "react";
-import "./Footer.css";
+import "./index.css";
 
-export default function Footer() {
+export function Footer() {
   return ( 
     <div className="Footer">
       <p> Copyright 2018 - Thomas Northall-Little </p>

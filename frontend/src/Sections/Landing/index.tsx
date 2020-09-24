@@ -1,14 +1,14 @@
 import React from "react";
 
-import { Graphic } from "../Components/Graphic/Graphic";
-import "./Landing.css";
+import { Graphic } from "../../Components/Graphic/Graphic";
+import "./index.css";
 import ProfilePic from "./profile.jpg";
 
 interface ILandingState {
   showPanel: boolean;
 }
 
-export default class Landing extends React.Component<{}, ILandingState> {
+export class Landing extends React.Component<{}, ILandingState> {
 
   constructor(props: any) {
     super(props);
