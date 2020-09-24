@@ -1,6 +1,6 @@
 import React from "react";
 
-import Graphic from "../Components/Graphic/Graphic";
+import { Graphic } from "../Components/NewGraphic/Graphic";
 import "./Landing.css";
 import ProfilePic from "./profile.jpg";
 
@@ -22,7 +22,7 @@ export default class Landing extends React.Component<{}, ILandingState> {
     return (
       <div className="landing">
 
-        <Graphic/>
+        <Graphic />
 
         <div className="Navbar">
           <ul>
@@ -31,7 +31,7 @@ export default class Landing extends React.Component<{}, ILandingState> {
         </div>
 
         <div className={"info"}>
-          <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"}/>
+          <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"} />
           <h1>Thomas Northall-Little</h1>
           <p className="byline">Software Engineer at Canva</p>
 
