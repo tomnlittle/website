@@ -1,6 +1,6 @@
 import React from "react";
 
-import About from "./About/About";
+import About from "./About";
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
 import Landing from "./Landing/Landing";

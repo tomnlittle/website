@@ -30,17 +30,12 @@ export const Graphic: React.FC<{}> = () => {
 		};
 
 		const resize = () => {
-			const width = parseInt(getComputedStyle(container)
-				.getPropertyValue('width')
-				.slice(0, -2));
+			const style = getComputedStyle(container);
+			const width = parseInt(style.getPropertyValue('width').slice(0, -2));
+			const height = parseInt(style.getPropertyValue('height').slice(0, -2));
 
-			const height = parseInt(getComputedStyle(container)
-				.getPropertyValue('height')
-				.slice(0, -2));
-
-			const ratio = window.devicePixelRatio || 1;
-			canvas.width = width * ratio;
-			canvas.height = height * ratio;
+			canvas.width = width *  window.devicePixelRatio;
+			canvas.height = height *  window.devicePixelRatio;
 			canvas.style.width = `${width}px`;
 			canvas.style.height = `${height}px`;
 

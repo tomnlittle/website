@@ -1,0 +1,24 @@
+.about-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 32px;
+}
+
+.about {
+    max-width: 50%;
+}
+
+.about h1 {
+    text-align: center;
+    padding: 8px;
+}
+
+.about p {
+    margin: 8px;
+    padding: 8px;
+    color: #555;
+}
