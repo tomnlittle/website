@@ -1,47 +1,32 @@
 import React from "react";
 
-import { Graphic } from "../../Components/Graphic/Graphic";
+import { ParticlesAnimation } from "../../Components";
 import "./index.css";
 import ProfilePic from "./profile.jpg";
 
-interface ILandingState {
-  showPanel: boolean;
-}
 
-export class Landing extends React.Component<{}, ILandingState> {
+export const Landing: React.FC<{}> = () => {
+	return (
+		<div className="landing">
+			<ParticlesAnimation />
 
-  constructor(props: any) {
-    super(props);
+			<div className="Navbar">
+				<ul>
+					<li><a href="#about">About</a></li>
+				</ul>
+			</div>
 
-    this.state = {
-      showPanel: false,
-    };
-  }
+			<div className={"info"}>
+				<img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"} />
+				<h1>Thomas Northall-Little</h1>
+				<p className="byline">Software Engineer at Canva</p>
 
-  public render(): JSX.Element {
-    return (
-      <div className="landing">
-
-        <Graphic />
-
-        <div className="Navbar">
-          <ul>
-            <li><a href="#about">About</a></li>
-          </ul>
-        </div>
-
-        <div className={"info"}>
-          <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"} />
-          <h1>Thomas Northall-Little</h1>
-          <p className="byline">Software Engineer at Canva</p>
-
-          <p> <a href="mailto:contact@tomnlittle.com">contact@tomnlittle.com</a></p>
-          <p className="Links">
-            <a href="https://www.linkedin.com/in/thomas-northall-little-073604111">LinkedIn</a>
-            <a href="https://github.com/tomnlittle">GitHub</a>
-          </p>
-        </div>
-      </div>
-    );
-  }
+				<p> <a href="mailto:contact@tomnlittle.com">contact@tomnlittle.com</a></p>
+				<p className="Links">
+					<a href="https://www.linkedin.com/in/thomas-northall-little-073604111">LinkedIn</a>
+					<a href="https://github.com/tomnlittle">GitHub</a>
+				</p>
+			</div>
+		</div>
+	);
 }

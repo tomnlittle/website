@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import { Particle } from './Particle';
-import "./Graphic.css";
+import "./index.css";
 
 const NUM_PARTICLES = 50;
 
-export const Graphic: React.FC<{}> = () => {
+export const ParticlesAnimation: React.FC<{}> = () => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 
