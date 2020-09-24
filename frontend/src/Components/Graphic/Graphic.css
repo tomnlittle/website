@@ -1,9 +1,7 @@
 .graphic {
-    /* position: absolute; */
     width: inherit;
     height: inherit;
     margin: 0;
-    /* z-index: -1; */
 }
 
 .graphic-container {

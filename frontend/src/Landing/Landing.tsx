@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Graphic } from "../Components/NewGraphic/Graphic";
+import { Graphic } from "../Components/Graphic/Graphic";
 import "./Landing.css";
 import ProfilePic from "./profile.jpg";
 
