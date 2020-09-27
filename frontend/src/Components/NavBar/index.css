@@ -1,0 +1,23 @@
+.Navbar {
+    position: absolute;
+    top: 0;
+}
+  
+.Navbar ul {
+    list-style-type: none;
+    margin: 40px;
+    padding: 0;
+}
+  
+.Navbar ul li {
+    display: inline;
+    margin: 20px;
+}
+  
+.Navbar ul li a, .landing .Navbar ul li a:visited {
+    text-transform: uppercase;
+}
+  
+.Navbar ul li a:hover, .landing .Navbar ul li a:visited:hover {
+    text-transform: uppercase;
+}

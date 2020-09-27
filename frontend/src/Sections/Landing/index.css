@@ -1,38 +1,18 @@
-.landing {
+.landing-content {
   height: 100vh;
   display: flex;
   align-items: center;
 }
 
-.landing .Navbar {
-  position: absolute;
-  top: 0;
+.landing-background {
+  z-index: -1;
 }
 
-.landing .Navbar ul {
-  list-style-type: none;
-  margin: 40px;
-  padding: 0;
-}
-
-.landing .Navbar ul li {
-  display: inline;
-  margin: 20px;
-}
-
-.landing .Navbar ul li a, .landing .Navbar ul li a:visited {
-  text-transform: uppercase;
-}
-
-.landing .Navbar ul li a:hover, .landing .Navbar ul li a:visited:hover {
-  text-transform: uppercase;
-}
-
-.landing .byline {
+ .byline {
   margin-top: 4px;
 }
 
-.landing .info {
+ .info {
   display: block;
   text-align: center;
 
@@ -45,12 +25,12 @@
   animation-name: fadeIn;
 }
 
-.landing .info .Links a {
+ .info .Links a {
   margin: 5px;
   padding: 5px;
 }
 
-.landing .Profile-Pic {
+ .Profile-Pic {
   height: 150px;
   border-radius: 100px;
   margin: 0px auto;
