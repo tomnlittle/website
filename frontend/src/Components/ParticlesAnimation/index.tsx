@@ -4,7 +4,7 @@ import "./index.css";
 
 const NUM_PARTICLES = 50;
 
-export const ParticlesAnimation: React.FC<{}> = () => {
+export const ParticlesAnimation: React.FC<{} & React.HTMLAttributes<HTMLDivElement>> = ({ className }) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -55,7 +55,7 @@ export const ParticlesAnimation: React.FC<{}> = () => {
 	});
 
 	return (
-		<div className='graphic-container' ref={containerRef}>
+		<div className={`graphic-container ${className}`} ref={containerRef}>
 			<canvas className='graphic' ref={canvasRef} />
 		</div>
 	);
