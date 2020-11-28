@@ -1,7 +1,7 @@
 import React from "react";
-import { ParticlesAnimation, NavBar } from "../../Components";
+import { ParticlesAnimation } from "../../Components";
+import { Profile } from './profile';
 import "./index.css";
-import ProfilePic from "./profile.jpg";
 
 
 export const Landing: React.FC<{}> = () => {
@@ -11,23 +11,17 @@ export const Landing: React.FC<{}> = () => {
 
 			<div className="landing-content">
 
-				<NavBar 
+				{/* <NavBar 
+					className='navbar'
 					Elements={[
 						{ href: '#about', name: 'About' }
 					]}
-				/>
+				/> */}
 
-				<div className="info">
-					<img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"} />
-					<h1>Thomas Northall-Little</h1>
-					<p className="byline">Software Engineer at Canva</p>
+				<Profile/>
 
-					<p> <a href="mailto:contact@tomnlittle.com">contact@tomnlittle.com</a></p>
-					<p className="Links">
-						<a href="https://www.linkedin.com/in/thomas-northall-little-073604111">LinkedIn</a>
-						<a href="https://github.com/tomnlittle">GitHub</a>
-					</p>
-				</div>
+				
+				
 			</div>
 		</div>
 	);

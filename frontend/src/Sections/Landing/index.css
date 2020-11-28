@@ -2,47 +2,17 @@
   height: 100vh;
   display: flex;
   align-items: center;
+  padding: 32px;
+}
+
+.landing-content .navbar {
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
 
 .landing-background {
   z-index: -1;
+  position: absolute;
 }
 
- .byline {
-  margin-top: 4px;
-}
-
- .info {
-  display: block;
-  text-align: center;
-
-  background-color: transparent;
-
-  margin: 0 auto;
-  padding: 40px;
-
-  animation-duration: 1s;
-  animation-name: fadeIn;
-}
-
- .info .Links a {
-  margin: 5px;
-  padding: 5px;
-}
-
- .Profile-Pic {
-  height: 150px;
-  border-radius: 100px;
-  margin: 0px auto;
-  display: block;
-}
-
-@keyframes fadeIn {
-  0% {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-  }
-}

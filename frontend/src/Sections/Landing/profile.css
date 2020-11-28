@@ -1,0 +1,44 @@
+.profile {
+    display: block;
+    text-align: center;
+  
+    animation-duration: 1s;
+    animation-name: fadeIn;
+  }
+
+.profile .profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profile .profile-container .bio {
+    flex-basis: 1;
+}
+
+.profile .profile-container .about {
+    flex-basis: 3;
+}
+  
+.profile .Links a {
+    margin: 5px;
+    padding: 5px;
+}
+  
+.Profile-Pic {
+    max-height: 150px;
+    border-radius: 100px;
+    margin: 0px auto;
+    display: block;
+}
+
+@keyframes fadeIn {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
