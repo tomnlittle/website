@@ -16,7 +16,7 @@ export default class App extends React.Component<{}, {}> {
     return (
         <div className="App">
           <Landing/>
-          <About/>
+          {/* <About/> */}
           <Footer/>
         </div>
     );

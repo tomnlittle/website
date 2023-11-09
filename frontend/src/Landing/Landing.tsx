@@ -24,11 +24,11 @@ export default class Landing extends React.Component<{}, ILandingState> {
 
         <Graphic/>
 
-        <div className="Navbar">
+        {/* <div className="Navbar">
           <ul>
             <li><a href="#about">About</a></li>
           </ul>
-        </div>
+        </div> */}
 
         <div className={"info"}>
           <img src={ProfilePic} className="Profile-Pic" alt={"Profile Picture"}/>
