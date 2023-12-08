@@ -5,9 +5,9 @@ import { Graphic } from "./Graphic/Graphic";
 function App() {
   return (
     <>
-      <div className="landing" id="home">
+      <div className="landing">
         <Graphic />
-        <div className={"info"}>
+        <div className="info">
           <img src={profilePicture} className="Profile-Pic" alt={"Profile Picture"} />
           <h1>Thomas Northall-Little</h1>
           <p className="byline">Senior Software Engineer at Canva</p>
