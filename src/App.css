@@ -64,11 +64,13 @@
   margin: 20px;
 }
 
-.landing .Navbar ul li a, .landing .Navbar ul li a:visited {
+.landing .Navbar ul li a,
+.landing .Navbar ul li a:visited {
   text-transform: uppercase;
 }
 
-.landing .Navbar ul li a:hover, .landing .Navbar ul li a:visited:hover {
+.landing .Navbar ul li a:hover,
+.landing .Navbar ul li a:visited:hover {
   text-transform: uppercase;
 }
 
@@ -123,4 +125,3 @@
   text-align: center;
   color: #555;
 }
-

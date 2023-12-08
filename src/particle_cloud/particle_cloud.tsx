@@ -1,16 +1,16 @@
 import { Component } from "react";
-import "./Graphic.css";
-import { Particle, animate, createParticle } from "./utils";
+import "./particle_cloud.css";
+import type { Particle } from "./utils";
+import { animate, createParticle } from "./utils";
 
 type GraphicState = {
   particles: Particle[];
   numParticles: number;
   width: number;
   height: number;
-}
+};
 
-export class Graphic extends Component <{}, GraphicState> {
-
+export class ParticleCloud extends Component<{}, GraphicState> {
   constructor(props: any) {
     super(props);
 
@@ -30,17 +30,12 @@ export class Graphic extends Component <{}, GraphicState> {
   }
 
   public componentDidMount() {
-
     const particles: Particle[] = [];
 
-    const {
-      height,
-      numParticles,
-      width,
-    } = this.state;
+    const { height, numParticles, width } = this.state;
 
     for (let i = 1; i <= numParticles; i++) {
-      const pt = createParticle({ width, height }); 
+      const pt = createParticle({ width, height });
       particles.push(pt);
     }
 
@@ -66,7 +61,6 @@ export class Graphic extends Component <{}, GraphicState> {
   }
 
   public loop() {
-
     // break case ?
 
     requestAnimationFrame(this.loop);
@@ -76,17 +70,12 @@ export class Graphic extends Component <{}, GraphicState> {
     // @ts-ignore
     const context = canvas.getContext("2d");
 
-    const {
-      width,
-      height,
-    } = this.state;
+    const { width, height } = this.state;
 
     animate(context, width, height, this.state.particles);
   }
 
   public render() {
-    return (
-      <canvas className="particle" ref="canvas"/>
-    );
+    return <canvas className="particleCloud" ref="canvas" />;
   }
 }
