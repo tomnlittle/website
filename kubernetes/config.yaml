@@ -1,9 +1,0 @@
-backend:
-  port: 3000
-
-frontend:
-  port: 80
-
-ingress:
-  port: 443
-  staticIpName: website
