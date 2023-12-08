@@ -1,4 +1,4 @@
-import "./App.css";
+import "./app.css";
 import profilePicture from "./assets/profile.jpg";
 import { ParticleCloud } from "./particle_cloud/particle_cloud";
 
